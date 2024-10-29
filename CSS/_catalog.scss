@@ -1,0 +1,1371 @@
+.catalog-top {
+    background-image: url(../images/catalog/Header.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+
+    &__header {
+        height: 76px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+
+        &__menu-mobile {
+            display: none;
+        }
+
+        &__search {
+            width: 288px;
+            height: 41px;
+            box-sizing: border-box;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            background: transparent;
+            padding-left: 32px;
+            padding-right: 203px;
+
+            &::placeholder {
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                text-align: left;
+            }
+        }
+    }
+
+
+
+    &__slogan {
+        padding-top: 127px;
+        padding-bottom: 126px;
+        color: rgb(255, 255, 255);
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 70px;
+        text-align: left;
+    }
+}
+
+
+.catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 64px;
+    padding-bottom: 41px;
+
+    &__menu {
+        text-decoration: none;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        &__links {
+            text-align: left;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+        }
+    }
+
+    &__filter-box {
+        display: flex;
+        gap: 10px;
+        position: relative;
+
+        &__filter {
+
+            box-sizing: border-box;
+            border: 1px solid rgb(196, 196, 196);
+            border-radius: 20px;
+            width: 182px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            overflow: hidden;
+            
+
+
+            &__select {
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                text-align: left;
+                border: none;
+                background: none;
+                padding-right: 56px;
+                outline: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+
+            &:after {
+                content: "";
+                width: 32px;
+                position: absolute;
+                z-index: 1;
+                pointer-events: none;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 11px 11px 0 11px;
+                border-color: #000000 transparent transparent transparent;
+                transform: rotate(0deg);
+                margin-right: 22px;
+            }
+        }
+        &__filter-pop {
+            box-sizing: border-box;
+            border: 1px solid rgb(196, 196, 196);
+            border-radius: 20px;
+            width: 227px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            overflow: hidden;
+
+            &__select {
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                text-align: left;
+                border: none;
+                background: none;
+                padding-right: 56px;
+                outline: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+
+            &:after {
+                content: "";
+                width: 32px;
+                position: absolute;
+                z-index: 1;
+                pointer-events: none;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 11px 11px 0 11px;
+                border-color: #000000 transparent transparent transparent;
+                transform: rotate(0deg);
+                margin-right: 22px;
+            }
+
+            
+        }
+
+        &__form {
+            width: 541px;
+            height: 548px;
+            background: $color-text;
+            position: absolute;
+            z-index: 1;
+            padding-block: 40px;
+            padding-inline: 48px;
+            box-shadow: 10px 10px 20px gray;
+            display: flex;
+            justify-content: space-between;
+            top: 54px;
+            right: 0px;
+
+            &__left {
+
+                &__delivery-time {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                    color: rgb(0, 0, 0);
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 17px;
+                    text-align: left;
+                    border: none;
+    
+                    &__header {
+                        color: rgb(5, 5, 5);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        text-align: left;
+                        padding-bottom: 16px;
+    
+                    }
+    
+                    &__radio {
+                        &__input {
+                            display: none;
+    
+                            &:checked {
+                                &+label:after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 2px;
+                                    top: 30%;
+                                    transform: translateY(-50%);
+                                    transform: rotate(45deg) translateY(-50%);
+                                    width: 5px;
+                                    height: 10px;
+                                    border: solid #000;
+                                    border-width: 0 2px 2px 0;
+                                }
+                            }
+                        }
+    
+                        &__label {
+                            position: relative;
+                            padding-left: 25px;
+                            cursor: pointer;
+    
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 15px;
+                                height: 15px;
+                                border: 2px solid #000;
+                                border-radius: 50%;
+                                background: #fff;
+                            }
+                        }
+                    }
+                }
+    
+                &__price {
+                    background: $color-text;
+                    border: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+    
+                    &__header {
+                        padding-top: 32px;
+                        color: rgb(5, 5, 5);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        text-align: left;
+                    }
+    
+                    &__paragraf {
+                        padding-top: 14px;
+                        color: rgb(0, 0, 0);
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 17px;
+                        text-align: left;
+    
+                        &__value {
+                            border: none;
+    
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+    
+                            }
+                        }
+                    }
+    
+    
+                    &__box {
+                        display: flex;
+    
+    
+    
+                        &__range {
+                            width: 190px;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            pointer-events: none;
+                            outline: none;
+    
+    
+                            &::-webkit-slider-runnable-track {
+                                height: 1px;
+                                width: 90px;
+                                border: 1px solid rgb(0, 0, 0);
+                                border-right: none;
+                                border-left: none;
+                                background-color: #fff;
+                            }
+    
+                            &::-webkit-slider-thumb {
+                                background: rgb(0, 0, 0);
+                                border: 1px solid rgb(0, 0, 0);
+                                border-radius: 8px/100%;
+                                cursor: pointer;
+                                width: 8px;
+                                height: 8px;
+                                -webkit-appearance: none;
+                                margin-top: -4px;
+                                pointer-events: auto;
+                                outline: none;
+                            }
+    
+                            &::-moz-range-track {
+                                height: 1px;
+                                border: 1px solid rgb(0, 0, 0);
+                                background-color: #fff;
+                            }
+    
+                            &::-moz-range-thumb {
+                                background: rgb(0, 0, 0);
+                                border: 1px solid rgb(0, 0, 0);
+                                border-radius: 8px/100%;
+                                cursor: pointer;
+                                pointer-events: auto;
+                            }
+                        }
+    
+                    }
+                }
+    
+                &__color {
+                    width: 190px;
+                    border: none;
+                    padding-top: 14px;
+    
+                    &__header {
+                        padding-top: 32px;
+                        color: rgb(5, 5, 5);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        text-align: left;
+                    }
+    
+                    &__box {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 14px;
+    
+    
+                        &__white {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+    
+                        &__black {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #fff;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: black;
+                                }
+                            }
+                        }
+    
+                        &__grey {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(115, 115, 115);
+                                    background: rgb(115, 115, 115);
+                                }
+                            }
+                        }
+    
+                        &__red {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(255, 0, 0);
+                                    background: rgb(255, 0, 0);
+                                }
+                            }
+                        }
+    
+                        &__orange {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(255, 122, 65);
+                                    background: rgb(255, 122, 65);
+                                }
+                            }
+                        }
+    
+                        &__yellow {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(242, 203, 1);
+                                    background: rgb(242, 203, 1);
+                                }
+                            }
+                        }
+    
+                        &__green {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(0, 191, 42);
+                                    background: rgb(0, 191, 42);
+                                }
+                            }
+                        }
+    
+                        &__light-green {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(28, 204, 151);
+                                    background: rgb(28, 204, 151);
+                                }
+                            }
+                        }
+    
+                        &__light-blue {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(0, 159, 227);
+                                    background: rgb(0, 159, 227);
+                                }
+                            }
+                        }
+    
+                        &__blue {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(0, 10, 248);
+                                    background: rgb(0, 10, 248);
+                                }
+                            }
+                        }
+    
+                        &__light-purple {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(103, 16, 214);
+                                    background: rgb(103, 16, 214);
+                                }
+                            }
+                        }
+    
+                        &__purple {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(157, 13, 181);
+                                    background: rgb(157, 13, 181);
+                                }
+                            }
+    
+                        }
+    
+                        &__light-pink {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(216, 154, 255);
+                                    background: rgb(216, 154, 255);
+                                }
+                            }
+                        }
+    
+                        &__pink {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 14px;
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid rgb(255, 101, 166);
+                                    background: rgb(255, 101, 166);
+                                }
+                            }
+    
+                        }
+                    }
+                }
+            }
+            &__right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                &__room {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                    color: rgb(0, 0, 0);
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 17px;
+                    text-align: left;
+                    border: none;
+                    width: 190px;
+    
+                    &__header {
+                        color: rgb(5, 5, 5);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        text-align: left;
+    
+                    }
+                    &__box {
+                        color: rgb(0, 0, 0);
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 17px;
+                        text-align: left;
+                        padding-top: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 14px;
+    
+    
+                        &__kitchen {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        &__bathroom {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        &__children {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        &__office {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        &__living {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        &__hallway {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        &__bedroom {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        &__wardrobe {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        &__cottage {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        &__lighting {
+                            &__checkbox {
+                                display: none;
+    
+                                &:checked {
+                                    &+label:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 2px;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        transform: rotate(45deg) translateY(-50%);
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid #000;
+                                        border-width: 0 2px 2px 0;
+                                    }
+                                }
+                            }
+    
+                            &__label {
+                                position: relative;
+                                padding-left: 25px;
+    
+                                cursor: pointer;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    border: 2px solid black;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                    
+                    }
+                }
+
+                &__button {
+                    background: $color-text;
+                    border: 1px solid rgb(4, 4, 4);
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                    width: 190px;
+                    height: 40px;
+                    color: rgb(0, 0, 0);
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    text-align: center;
+                }
+            }
+        }
+        
+    }
+}
+
+.min {
+    position: relative;
+}
+
+.max {
+    position: absolute;
+}
