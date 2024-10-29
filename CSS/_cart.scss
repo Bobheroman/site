@@ -234,13 +234,19 @@
 
         &__info {
             width: 288px;
-            color: rgb(0, 0, 0);
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 17px;
+            
             border: none;
             background: rgb(247, 246, 246);
             border-bottom: 1px solid rgb(202, 205, 216);
+            &::placeholder {
+                color: rgb(0, 0, 0);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17px;
+            }
+            &:active {
+                
+            }
         }
     }
 
