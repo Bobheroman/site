@@ -490,6 +490,12 @@ body {
   gap: 10px;
   position: relative;
 }
+.catalog__filter-box__filter:hover > .catalog__filter-box__filter__select {
+  color: #FFFFFF;
+}
+.catalog__filter-box__filter-pop:hover > .catalog__filter-box__filter-pop__select {
+  color: #FFFFFF;
+}
 .catalog__filter-box__filter {
   box-sizing: border-box;
   border: 1px solid rgb(196, 196, 196);
@@ -501,6 +507,25 @@ body {
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
+  transition: all 0.3s;
+}
+.catalog__filter-box__filter:hover {
+  background-color: black;
+  color: #FFFFFF;
+}
+.catalog__filter-box__filter:hover:after {
+  content: "";
+  width: 32px;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 11px 11px 0 11px;
+  border-color: #FFFFFF transparent transparent transparent;
+  transform: rotate(0deg);
+  margin-right: 22px;
 }
 .catalog__filter-box__filter__select {
   color: rgb(0, 0, 0);
@@ -509,12 +534,13 @@ body {
   line-height: 20px;
   text-align: left;
   border: none;
-  background: none;
+  background: transparent;
   padding-right: 56px;
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  transition: all 0.5s;
 }
 .catalog__filter-box__filter:after {
   content: "";
@@ -541,6 +567,25 @@ body {
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
+  transition: all 0.5s;
+}
+.catalog__filter-box__filter-pop:hover {
+  background-color: black;
+  color: #FFFFFF;
+}
+.catalog__filter-box__filter-pop:hover:after {
+  content: "";
+  width: 32px;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 11px 11px 0 11px;
+  border-color: #FFFFFF transparent transparent transparent;
+  transform: rotate(0deg);
+  margin-right: 22px;
 }
 .catalog__filter-box__filter-pop__select {
   color: rgb(0, 0, 0);
@@ -549,12 +594,13 @@ body {
   line-height: 20px;
   text-align: left;
   border: none;
-  background: none;
+  background: transparent;
   padding-right: 56px;
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  transition: all 0.5s;
 }
 .catalog__filter-box__filter-pop:after {
   content: "";
@@ -1517,8 +1563,9 @@ body {
   font-weight: 400;
   line-height: 20px;
   text-align: center;
+  transition: all 0.5s;
 }
-.catalog__filter-box__form__right__button:active {
+.catalog__filter-box__form__right__button:hover {
   background-color: black;
   color: #FFFFFF;
 }

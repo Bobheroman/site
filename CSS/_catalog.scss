@@ -82,9 +82,16 @@
         display: flex;
         gap: 10px;
         position: relative;
-
+        
+        &__filter:hover >
+        .catalog__filter-box__filter__select {
+            color: $color-text;
+        }
+        &__filter-pop:hover >
+        .catalog__filter-box__filter-pop__select {
+            color: $color-text;
+        }
         &__filter {
-
             box-sizing: border-box;
             border: 1px solid rgb(196, 196, 196);
             border-radius: 20px;
@@ -95,9 +102,25 @@
             align-items: center;
             justify-content: flex-end;
             overflow: hidden;
-            
-
-
+            transition: all 0.3s;
+            &:hover {
+                background-color: black;
+                color: $color-text;
+                &:after {
+                    content: "";
+                    width: 32px;
+                    position: absolute;
+                    z-index: 1;
+                    pointer-events: none;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 11px 11px 0 11px;
+                    border-color: $color-text transparent transparent transparent;
+                    transform: rotate(0deg);
+                    margin-right: 22px;
+                }
+            }
             &__select {
                 color: rgb(0, 0, 0);
                 font-size: 16px;
@@ -105,12 +128,13 @@
                 line-height: 20px;
                 text-align: left;
                 border: none;
-                background: none;
+                background: transparent;
                 padding-right: 56px;
                 outline: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 appearance: none;
+                transition: all 0.5s;
             }
 
             &:after {
@@ -139,7 +163,25 @@
             align-items: center;
             justify-content: flex-end;
             overflow: hidden;
-
+            transition: all 0.5s;
+            &:hover {
+                background-color: black;
+                color: $color-text;
+                &:after {
+                    content: "";
+                    width: 32px;
+                    position: absolute;
+                    z-index: 1;
+                    pointer-events: none;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 11px 11px 0 11px;
+                    border-color: $color-text transparent transparent transparent;
+                    transform: rotate(0deg);
+                    margin-right: 22px;
+                }
+            }
             &__select {
                 color: rgb(0, 0, 0);
                 font-size: 16px;
@@ -147,12 +189,13 @@
                 line-height: 20px;
                 text-align: left;
                 border: none;
-                background: none;
+                background: transparent;
                 padding-right: 56px;
                 outline: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 appearance: none;
+                transition: all 0.5s;
             }
 
             &:after {
@@ -1355,8 +1398,9 @@
                     font-weight: 400;
                     line-height: 20px;
                     text-align: center;
+                    transition: all 0.5s;
 
-                    &:active {
+                    &:hover {
                         background-color: black;
                         color: $color-text;
                     }
