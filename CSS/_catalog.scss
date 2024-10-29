@@ -1355,6 +1355,11 @@
                     font-weight: 400;
                     line-height: 20px;
                     text-align: center;
+
+                    &:active {
+                        background-color: black;
+                        color: $color-text;
+                    }
                 }
             }
         }

@@ -1518,6 +1518,10 @@ body {
   line-height: 20px;
   text-align: center;
 }
+.catalog__filter-box__form__right__button:active {
+  background-color: black;
+  color: #FFFFFF;
+}
 
 .min {
   position: relative;
