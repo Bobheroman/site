@@ -1874,7 +1874,7 @@ body {
     font-size: 61px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 698px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -1939,6 +1939,7 @@ body {
   }
   .product__content {
     gap: 32px 0px;
+    justify-content: center;
   }
   .product__header__so {
     font-size: 24px;
@@ -2043,6 +2044,9 @@ body {
   }
   .catalog__filter-box__form__right__button {
     margin-top: 32px;
+  }
+  .cart-body {
+    align-items: center;
   }
   .cart-top {
     background-image: url(../images/cart/back-mobile.png);

@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 698px) {
     .center {
         padding-left: 16px;
         padding-right: 16px;
@@ -77,6 +77,7 @@
     }
     .product__content {
         gap: 32px 0px;
+        justify-content: center;
     }
 
     .product__header__so {
@@ -201,7 +202,9 @@
     }
 
     // Корзина
-
+    .cart-body {
+        align-items: center;
+    }
     .cart-top {
         background-image: url(../images/cart/back-mobile.png);
         background-position: right;
@@ -232,6 +235,7 @@
             line-height: 59px;
         }
     }
+
 
     .cart__product__box__img {
         display: none;
