@@ -61,9 +61,9 @@
                     </div>
                 </div>
                 <div class="cart__product__count-box">
-                    <input type="number" value="1" min="0" name="numberInput" class="cart__product__count">
-                    <img class="cart__product__imgup" src="./images/cart/valueUp.svg" alt="dsfdf">
-                    <img class="cart__product__imgdown" src="./images/cart/valueDown.svg" alt="dsfdf">
+                    <input id="numberInput1" type="number" value="1" min="0" name="numberInput1" class="cart__product__count">
+                    <button class="cart__product__imgup" onclick="numberInput1.stepUp()"><img src="./images/cart/valueUp.svg" alt="vlue-up"></button>
+                    <button class="cart__product__imgdown" onclick="numberInput1.stepDown()"><img src="./images/cart/valueDown.svg" alt="value-down"></button>
                 </div>
             </article>
 
@@ -86,14 +86,18 @@
 
                 </div>
                 <div class="cart__product__count-box">
-                    <input type="number" value="1" min="0" name="numberInput" class="cart__product__count">
-                    <img class="cart__product__imgup" src="./images/cart/valueUp.svg" alt="dsfdf">
-                    <img class="cart__product__imgdown" src="./images/cart/valueDown.svg" alt="dsfdf">
+                    <input id="numberInput2" type="number" value="1" min="0" name="numberInput2" class="cart__product__count">
+                    <button class="cart__product__imgup" onclick="numberInput2.stepUp()"><img src="./images/cart/valueUp.svg" alt="vlue-up"></button>
+                    <button class="cart__product__imgdown" onclick="numberInput2.stepDown()"><img src="./images/cart/valueDown.svg" alt="value-down"></button>
                 </div>
             </article>
             <div class="cart__button-box">
-                <input class="cart__button-box__button" type="button" value="Очистить корзину">
-                <input class="cart__button-box__button" type="button" value="Продолжить покупки">
+                <!-- <input class="cart__button-box__button" type="button" value="Очистить корзину"> -->
+                <button class="cart__button-box__button" type="reset">Очистить корзину</button>
+                
+                <button class="cart__button-box__button">
+                    <a class="cart__button-box__button__link" href="catalog.html">Продолжить покупки</a>
+                </button>
             </div>
         </div>
 

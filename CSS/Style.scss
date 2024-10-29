@@ -377,6 +377,35 @@ body {
                 flex: none;
                 order: 0;
                 flex-grow: 0;
+
+                &__imgVk {
+                    background-color: transparent;
+                    
+                    &:hover {
+                        content: url(../images/vk-black.svg); 
+                    }
+
+                }
+                &__imgTe {
+                    background-color: transparent;
+                    
+                    &:hover {
+                        content: url(../images/Te-black.svg); 
+                    }
+
+                }
+                &__imgYa {
+                    background-color: transparent;
+                    
+                    
+                    &:hover {
+                        content: url(../images/Ya-black.svg); 
+                    }
+
+                }
+                
+
+                
             }
         }
     }

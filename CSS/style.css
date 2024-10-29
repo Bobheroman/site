@@ -338,6 +338,24 @@ body {
   order: 0;
   flex-grow: 0;
 }
+.footer__contacts__links__logo__imgVk {
+  background-color: transparent;
+}
+.footer__contacts__links__logo__imgVk:hover {
+  content: url(../images/vk-black.svg);
+}
+.footer__contacts__links__logo__imgTe {
+  background-color: transparent;
+}
+.footer__contacts__links__logo__imgTe:hover {
+  content: url(../images/Te-black.svg);
+}
+.footer__contacts__links__logo__imgYa {
+  background-color: transparent;
+}
+.footer__contacts__links__logo__imgYa:hover {
+  content: url(../images/Ya-black.svg);
+}
 
 .news {
   display: flex;
@@ -1594,19 +1612,19 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  pointer-events: none;
   right: 3px;
   top: 6px;
-  cursor: pointer;
+  border: none;
+  background: #F7F6F6;
 }
 .cart__product__imgdown {
   position: absolute;
   display: flex;
   flex-direction: column;
-  pointer-events: none;
   right: 3px;
   top: 27px;
-  cursor: pointer;
+  border: none;
+  background: #F7F6F6;
 }
 .cart__product__count {
   position: relative;
@@ -1620,6 +1638,7 @@ body {
   border-radius: 6px;
   border: none;
   background: #F7F6F6;
+  cursor: pointer;
 }
 .cart__product__count::-webkit-outer-spin-button, .cart__product__count::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -1675,14 +1694,20 @@ body {
   border-radius: 50px;
   width: 200px;
   height: 37px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 17px;
+}
+.cart__button-box__button__link {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
   text-align: center;
+  text-decoration: none;
+}
+.cart__button-box__button__link:active {
+  color: #FFFFFF;
 }
 .cart__button-box__button:active {
   background-color: black;
