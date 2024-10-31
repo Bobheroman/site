@@ -360,46 +360,45 @@ button:hover {
         line-height: 41px;
         justify-content: center;
         align-items: center;
-        text-decoration: none;
+        text-decoration: none;   
+    }
+    &__big {
+        grid-column: span 6;
+    }
 
-        &__big {
-            grid-column: span 6;
-        }
+    &__1 {
+        background-image: url(../images/Relax.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
-        &__1 {
-            background-image: url(../images/Relax.jpeg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+    &__2 {
+        background-image: url(../images/Working.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
-        &__2 {
-            background-image: url(../images/Working.jpeg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+    &__3 {
+        background-image: url(../images/Kitchen.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
-        &__3 {
-            background-image: url(../images/Kitchen.jpeg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+    &__4 {
+        background-image: url(../images/Children.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
-        &__4 {
-            background-image: url(../images/Children.jpeg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-
-        &__5 {
-            background-image: url(../images/Bathroom.jpeg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+    &__5 {
+        background-image: url(../images/Bathroom.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -427,76 +426,71 @@ button:hover {
     &__content {
         display: flex;
         gap: 48px 32px;
+        flex-wrap: wrap;    
+    }
+    &__box {
+        width: 378px;
+        display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
-
-        &__box {
-            width: 378px;
+        position: relative;
+        &:hover .product__icons {
             display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            position: relative;
-
-            &__img {
-                width: 100%;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-            }
-
-            &__header {
-                color: rgb(0, 0, 0);
-                font-size: 24px;
-                font-weight: 500;
-                line-height: 29px;
-
-                padding-top: 10px;
-                padding-bottom: 9px;
-                text-decoration: none;
-            }
-
-            &__description {
-                font-size: 14px;
-                line-height: 17px;
-                color: #888888;
-                padding-bottom: 12px;
-
-            }
-
-            &__price-box {
-                display: flex;
-                gap: 32px;
-                justify-content: flex-start;
-
-                &__price {
-                    font-weight: 500;
-                    font-size: 24px;
-                    line-height: 29px;
-                    color: #050505;
-                }
-
-                &__old-price {
-                    font-weight: 500;
-                    font-size: 24px;
-                    line-height: 29px;
-                    text-decoration-line: line-through;
-                    color: #888888;
-                }
-            }
-
-            &__icons {
-                position: absolute;
-                display: none;
-                top: 10px;
-                right: 10px;
-                gap: 20px;
-            }
-
-            &:hover .product__content__box__icons {
-                display: flex;
-            }
         }
     }
+    &__img {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
+    &__header {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+
+        padding-top: 10px;
+        padding-bottom: 9px;
+        text-decoration: none;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 17px;
+        color: #888888;
+        padding-bottom: 12px;
+
+    }
+
+    &__price-box {
+        display: flex;
+        gap: 32px;
+        justify-content: flex-start;    
+    }
+    &__price {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #050505;
+    }
+
+    &__old-price {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        text-decoration-line: line-through;
+        color: #888888;
+    }
+
+    &__icons {
+        position: absolute;
+        display: none;
+        top: 10px;
+        right: 10px;
+        gap: 20px;
+    }
 }
 
 .linksBox {
@@ -539,87 +533,69 @@ button:hover {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
-
-
-        &__header {
-            color: rgb(0, 0, 0);
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 29px;
-
-        }
+        gap: 12px;    
+    }
+    &__header {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
     }
 
     &__contacts {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        align-items: flex-start;
+        align-items: flex-start;    
+    }
+    &__logo {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
 
-        &__logo {
-            color: rgb(0, 0, 0);
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 29px;
+    }
 
+    &__support {
+        text-decoration: none;
+        color: rgb(136, 136, 136);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+
+        &:hover {
+            text-decoration: underline;
         }
+    }
 
-        &__support {
-            text-decoration: none;
-            color: rgb(136, 136, 136);
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 17px;
-
-            &:hover {
-                text-decoration: underline;
-            }
+    &__links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;    
+    }
+    &__logo {
+        text-decoration: none;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    &__imgVk {
+        background-color: transparent;
+        &:hover {
+            content: url(../images/vk-black.svg);
         }
-
-        &__links {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            align-items: center;
-
-            &__logo {
-                text-decoration: none;
-                flex: none;
-                order: 0;
-                flex-grow: 0;
-
-                &__imgVk {
-                    background-color: transparent;
-
-                    &:hover {
-                        content: url(../images/vk-black.svg);
-                    }
-
-                }
-
-                &__imgTe {
-                    background-color: transparent;
-
-                    &:hover {
-                        content: url(../images/Te-black.svg);
-                    }
-
-                }
-
-                &__imgYa {
-                    background-color: transparent;
-
-
-                    &:hover {
-                        content: url(../images/Ya-black.svg);
-                    }
-
-                }
-
-
-
-            }
+    }
+    &__imgTe {
+        background-color: transparent;
+        &:hover {
+            content: url(../images/Te-black.svg);
+        }
+    }
+    &__imgYa {
+        background-color: transparent;
+        &:hover {
+            content: url(../images/Ya-black.svg);
         }
     }
 }
@@ -631,7 +607,6 @@ button:hover {
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
-
     gap: 12px;
 
     &__header {
