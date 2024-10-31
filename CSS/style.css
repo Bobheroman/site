@@ -102,16 +102,7 @@ button:hover {
 .menu__window:hover .menu__cart {
   display: block;
 }
-.menu__cart {
-  display: none;
-  position: absolute;
-  background-color: #FFFFFF;
-  padding: 40px 48px;
-  min-width: 573px;
-  top: 66px;
-  right: 0px;
-}
-.menu__cart__bridge {
+.menu__bridge {
   position: absolute;
   background: transparent;
   height: 56px;
@@ -119,122 +110,69 @@ button:hover {
   top: -53px;
   right: 0px;
 }
-.menu__cart__product {
-  max-width: 786px;
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 0px;
-}
-.menu__cart__product__count-box {
-  position: relative;
-}
-.menu__cart__product__imgup {
+.menu__cart {
+  display: none;
   position: absolute;
+  background-color: #FFFFFF;
+  padding: 40px 48px;
+  max-width: 573px;
+  top: 66px;
+  right: 0px;
+}
+.menu__product {
   display: flex;
-  flex-direction: column;
-  right: 3px;
-  top: 6px;
-  border: none;
-  background: #F7F6F6;
+  padding-bottom: 24px;
+  gap: 48px;
 }
-.menu__cart__product__imgdown {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  right: 3px;
-  top: 27px;
-  border: none;
-  background: #F7F6F6;
-}
-.menu__cart__product__count {
-  position: relative;
-  color: rgb(0, 0, 0);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 210%;
-  text-align: center;
-  width: 71px;
-  height: 51px;
-  border-radius: 6px;
-  border: none;
-  background: #F7F6F6;
-  cursor: pointer;
-}
-.menu__cart__product__count::-webkit-outer-spin-button, .menu__cart__product__count::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-.menu__cart__product__box {
-  display: flex;
-  gap: 32px;
-  justify-content: space-between;
-}
-.menu__cart__product__box__description {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.menu__cart__product__box__description__heading {
-  color: rgb(0, 0, 0);
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 29px;
-}
-.menu__cart__product__box__description__price {
-  color: rgb(5, 5, 5);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-}
-.menu__cart__product__box__description__button-box {
+.menu__button-box-product {
   display: flex;
   gap: 30px;
+  padding-top: 54px;
 }
-.menu__cart__product__box__description__button-box__button {
-  color: rgb(0, 0, 0);
-  font-size: 14px;
-  font-weight: 400;
-  text-decoration: underline;
-  background: none;
-  border: none;
+
+.window-up {
+  border-top: 0.5px solid rgb(202, 205, 216);
+  padding-top: 24px;
 }
-.menu__cart__product__box__description__button-box__button:active {
-  text-decoration: none;
-}
-.menu__cart__box {
+
+.window-cart__box {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.menu__cart__box__info {
+.window-cart__info {
   display: flex;
   gap: 11px;
 }
-.menu__cart__box__info__heading {
+.window-cart__heading {
   color: rgb(0, 0, 0);
   font-size: 24px;
   font-weight: 400;
   line-height: 29px;
 }
-.menu__cart__box__info__price {
+.window-cart__price {
   color: rgb(0, 0, 0);
   font-size: 24px;
   font-weight: 600;
   line-height: 29px;
 }
-.menu__cart__box__button {
+.window-cart__button {
   box-sizing: border-box;
   border: 1px solid rgb(4, 4, 4);
   background: transparent;
   border-radius: 50px;
   width: 207px;
   height: 40px;
+}
+.window-cart__button:hover a {
+  color: #FFFFFF;
+}
+.window-cart__button-link {
   color: rgb(0, 0, 0);
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-}
-.menu__cart__box__button:active {
-  background: gray;
+  text-decoration: none;
 }
 
 .internal-links {
@@ -1692,7 +1630,7 @@ button:hover {
 .cart {
   margin-top: 64px;
 }
-.cart__heading {
+.cart__heading-top {
   display: flex;
   justify-content: space-between;
   max-width: 756px;
@@ -1705,17 +1643,16 @@ button:hover {
   line-height: 20px;
 }
 .cart__product {
-  max-width: 786px;
+  min-width: 786px;
   display: flex;
   justify-content: space-between;
   padding-top: 32px;
   padding-bottom: 32px;
-  border-top: 0.5px solid rgb(202, 205, 216);
 }
-.cart__product__count-box {
+.cart__count-box {
   position: relative;
 }
-.cart__product__imgup {
+.cart__imgup {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -1724,7 +1661,7 @@ button:hover {
   border: none;
   background: #F7F6F6;
 }
-.cart__product__imgdown {
+.cart__imgdown {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -1733,7 +1670,7 @@ button:hover {
   border: none;
   background: #F7F6F6;
 }
-.cart__product__count {
+.cart__count {
   position: relative;
   color: rgb(0, 0, 0);
   font-size: 14px;
@@ -1747,36 +1684,43 @@ button:hover {
   background: #F7F6F6;
   cursor: pointer;
 }
-.cart__product__count::-webkit-outer-spin-button, .cart__product__count::-webkit-inner-spin-button {
+.cart__count::-webkit-outer-spin-button, .cart__count::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.cart__product__box {
+.cart__box {
   display: flex;
   gap: 32px;
 }
-.cart__product__box__description {
+.cart__description {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.cart__product__box__description__heading {
+.cart__heading {
   color: rgb(0, 0, 0);
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
+  text-wrap: nowrap;
 }
-.cart__product__box__description__info {
+.cart__info {
   color: rgb(136, 136, 136);
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   width: 276px;
 }
-.cart__product__box__description__button-box {
+.cart__price {
+  color: rgb(5, 5, 5);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.cart__button-box-product {
   display: flex;
   gap: 30px;
 }
-.cart__product__box__description__button-box__button {
+.cart__button-product {
   color: rgb(0, 0, 0);
   font-size: 14px;
   font-weight: 400;
@@ -1784,14 +1728,14 @@ button:hover {
   background: none;
   border: none;
 }
-.cart__product__box__description__button-box__button:active {
+.cart__button-product:active {
   text-decoration: none;
 }
 .cart__button-box {
   display: flex;
   gap: 7px;
 }
-.cart__button-box__button {
+.cart__button {
   box-sizing: border-box;
   background-color: #FFFFFF;
   border: 1px solid rgb(0, 0, 0);
@@ -1802,10 +1746,10 @@ button:hover {
   font-weight: 400;
   line-height: 17px;
 }
-.cart__button-box__button:hover > .cart__button-box__button__link {
+.cart__button:hover > a {
   color: #FFFFFF;
 }
-.cart__button-box__button__link {
+.cart__link {
   color: rgb(0, 0, 0);
   font-size: 14px;
   font-weight: 400;

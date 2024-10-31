@@ -15,7 +15,7 @@
 .cart {
     margin-top: 64px;
 
-    &__heading {
+    &__heading-top {
         display: flex;
         justify-content: space-between;
         max-width: 756px;
@@ -29,110 +29,109 @@
     }
 
     &__product {
-
-        max-width: 786px;
+        min-width: 786px;
         display: flex;
         justify-content: space-between;
         padding-top: 32px;
-        padding-bottom: 32px;
-        border-top: 0.5px solid rgb(202, 205, 216);
+        padding-bottom: 32px;     
+    }
 
-        &__count-box {
-            position: relative;
+    &__count-box {
+        position: relative;
+    }
+
+    &__imgup {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 3px;
+        top: 6px;
+        border: none;
+        background: #F7F6F6;
+    }
+
+    &__imgdown {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 3px;
+        top: 27px;
+        border: none;
+        background: #F7F6F6;
+    }
+
+    &__count {
+        position: relative;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 210%;
+        text-align: center;
+        width: 71px;
+        height: 51px;
+        border-radius: 6px;
+        border: none;
+        background: #F7F6F6;
+        cursor: pointer;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
         }
+    }
 
-        &__imgup {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            right: 3px;
-            top: 6px;
-            border: none;
-            background: #F7F6F6;
+    &__box {
+        display: flex;
+        gap: 32px;   
+    }
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        
+    }
 
+    &__heading {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        text-wrap: nowrap;
 
-        }
+    }
 
-        &__imgdown {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            right: 3px;
-            top: 27px;
-            border: none;
-            background: #F7F6F6;
+    &__info {
+        color: rgb(136, 136, 136);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        width: 276px;
+    }
 
-        }
+    &__price {
+        color: rgb(5, 5, 5);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        
+    }
 
-        &__count {
-            position: relative;
-            color: rgb(0, 0, 0);
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 210%;
-            text-align: center;
-            width: 71px;
-            height: 51px;
-            border-radius: 6px;
-            border: none;
-            background: #F7F6F6;
-            cursor: pointer;
-
-            &::-webkit-outer-spin-button,
-            &::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-            }
-        }
-
-
-
-        &__box {
-            display: flex;
-            gap: 32px;
-
-
-            &__description {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-
-                &__heading {
-                    color: rgb(0, 0, 0);
-                    font-size: 24px;
-                    font-weight: 500;
-                    line-height: 29px;
-
-                }
-
-                &__info {
-                    color: rgb(136, 136, 136);
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 17px;
-
-                    width: 276px;
-                }
-
-                &__button-box {
-                    display: flex;
-                    gap: 30px;
-
-                    &__button {
-                        color: rgb(0, 0, 0);
-                        font-size: 14px;
-                        font-weight: 400;
-                        text-decoration: underline;
-                        background: none;
-                        border: none;
+    &__button-box-product {
+        display: flex;
+        gap: 30px;
+        
+    }
+    &__button-product {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: underline;
+        background: none;
+        border: none;
 
 
-                        &:active {
-                            text-decoration: none;
-                        }
-                    }
-
-                }
-            }
+        &:active {
+            text-decoration: none;
         }
     }
 
@@ -140,34 +139,31 @@
 
     &__button-box {
         display: flex;
-        gap: 7px;
+        gap: 7px;    
+    }
+    &__button {
+        box-sizing: border-box;
+        background-color: $color-text;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 50px;
+        width: 200px;
+        height: 37px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
 
-        &__button {
-            box-sizing: border-box;
-            background-color: $color-text;
-            border: 1px solid rgb(0, 0, 0);
-            border-radius: 50px;
-            width: 200px;
-            height: 37px;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 17px;
-
-            &:hover>.cart__button-box__button__link {
-                color: $color-text;
-            }
-
-            &__link {
-                color: rgb(0, 0, 0);
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 17px;
-                text-align: center;
-                text-decoration: none;
-            }
-
-
+        &:hover > 
+        a {
+            color: $color-text;
         }
+    }
+    &__link {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: center;
+        text-decoration: none;
     }
 }
 

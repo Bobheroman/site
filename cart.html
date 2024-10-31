@@ -39,68 +39,65 @@
 
     <section class="cart-body center">
         <div class="cart">
-            <div class="cart__heading">
-                <p class="cart__heading__text">Товар</p>
-                <p class="cart__heading__text">К-во</p>
+            <div class="cart__heading-top">
+                <p class="cart__text">Товар</p>
+                <p class="cart__text">К-во</p>
             </div>
-            <article class="cart__product">
-                <div class="cart__product__box">
-                    <div class="cart__product__img"><img src="./images/cart/product1.jpeg" alt=""></div>
+            <article class="cart__product up">
+                <div class="cart__box">
+                    <div class="cart__img"><img src="./images/cart/product1.jpeg" alt=""></div>
 
-                    <div class="cart__product__description">
-                        <h2 class="cart__product__description__heading">Стол MENU</h2>
-                        <p class="cart__product__description__info">Для того чтобы трапезничать было приятно,
+                    <div class="cart__description">
+                        <h2 class="cart__heading">Стол MENU</h2>
+                        <p class="cart__info">Для того чтобы трапезничать было приятно,
                             необходим правильный обеденный стол.</p>
-                        <p class="cart__product__description__price">34 000 руб.</p>
-                        <div class="cart__product__description__button-box">
-                            <input class="cart__product__description__button-box__button" type="button"
-                                value="Избранные">
-                            <input class="cart__product__description__button-box__button" type="button" value="Удалить">
+                        <p class="cart__price">34 000 руб.</p>
+                        <div class="cart__button-box-product">
+                            <button class="cart__button-product">Избранные</button>
+                            <button class="cart__button-product">Удалить</button>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="cart__product__count-box">
-                    <input id="numberInput1" type="number" value="1" min="0" name="numberInput1"
-                        class="cart__product__count">
-                    <button class="cart__product__imgup" onclick="numberInput1.stepUp()"><img
-                            src="./images/cart/valueUp.svg" alt="vlue-up"></button>
-                    <button class="cart__product__imgdown" onclick="numberInput1.stepDown()"><img
+                <div class="cart__count-box">
+                    <input id="numberInput1" type="number" value="1" min="0" name="numberInput1" class="cart__count">
+                    <button class="cart__imgup" onclick="numberInput1.stepUp()"><img src="./images/cart/valueUp.svg"
+                            alt="vlue-up"></button>
+                    <button class="cart__imgdown" onclick="numberInput1.stepDown()"><img
                             src="./images/cart/valueDown.svg" alt="value-down"></button>
                 </div>
             </article>
 
-            <article class="cart__product">
-                <div class="cart__product__box">
-                    <div class="cart__product__img"><img src="./images/cart/product2.jpeg" alt=""></div>
+            <article class="cart__product up">
+                <div class="cart__box">
+                    <div class="cart__img"><img src="./images/cart/product2.jpeg" alt=""></div>
 
-                    <div class="cart__product__description">
-                        <h2 class="cart__product__description__heading">Диван NASTAN</h2>
-                        <p class="cart__product__description__info">Модель отличается простотой линий и форм,
+                    <div class="cart__description">
+                        <h2 class="cart__heading">Диван NASTAN</h2>
+                        <p class="cart__info">Модель отличается простотой линий и форм,
                             отсутствием броского декора.</p>
-                        <p class="cart__product__description__price">80 000 руб.</p>
-                        <div class="cart__product__description__button-box">
-                            <input class="cart__product__description__button-box__button" type="button"
-                                value="Избранные">
-                            <input class="cart__product__description__button-box__button" type="button" value="Удалить">
+                        <p class="cart__price">80 000 руб.</p>
+                        <div class="cart__button-box-product">
+                            <button class="cart__button-product">Избранные</button>
+                            <button class="cart__button-product">Удалить</button>
                         </div>
                     </div>
 
                 </div>
-                <div class="cart__product__count-box">
-                    <input id="numberInput2" type="number" value="1" min="0" name="numberInput2"
-                        class="cart__product__count">
-                    <button class="cart__product__imgup" onclick="numberInput2.stepUp()"><img
-                            src="./images/cart/valueUp.svg" alt="vlue-up"></button>
-                    <button class="cart__product__imgdown" onclick="numberInput2.stepDown()"><img
+                <div class="cart__count-box">
+                    <input id="numberInput2" type="number" value="1" min="0" name="numberInput2" class="cart__count">
+                    <button class="cart__imgup" onclick="numberInput2.stepUp()"><img src="./images/cart/valueUp.svg"
+                            alt="vlue-up"></button>
+                    <button class="cart__imgdown" onclick="numberInput2.stepDown()"><img
                             src="./images/cart/valueDown.svg" alt="value-down"></button>
                 </div>
             </article>
             <div class="cart__button-box">
-                <!-- <input class="cart__button-box__button" type="button" value="Очистить корзину"> -->
-                <button class="cart__button-box__button" type="reset">Очистить корзину</button>
+                
+                <button class="cart__button" type="reset">Очистить корзину</button>
 
-                <button class="cart__button-box__button">
-                    <a class="cart__button-box__button__link" href="catalog.html">Продолжить покупки</a>
+                <button class="cart__button">
+                    <a class="cart__link" href="catalog.html">Продолжить покупки</a>
                 </button>
             </div>
         </div>
