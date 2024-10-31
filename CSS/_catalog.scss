@@ -4,52 +4,12 @@
     background-position: center;
     background-size: cover;
     height: 400px;
-
-    &__header {
-        height: 76px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
-
-        &__menu-mobile {
-            display: none;
-        }
-
-        &__search {
-            width: 288px;
-            height: 41px;
-            box-sizing: border-box;
-            border: 1px solid rgb(255, 255, 255);
-            border-radius: 20px;
-            background: transparent;
-            padding-left: 32px;
-            padding-right: 203px;
-
-            &::placeholder {
-                color: rgb(255, 255, 255);
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 20px;
-                text-align: left;
-            }
-        }
-    }
-
-
-
-    &__slogan {
-        padding-top: 127px;
-        padding-bottom: 126px;
-        color: rgb(255, 255, 255);
-        font-size: 64px;
-        font-weight: 600;
-        line-height: 70px;
-        text-align: left;
-    }
 }
 
+.ct {
+    padding-top: 127px;
+    
+}
 
 .catalog {
     display: flex;
@@ -68,13 +28,13 @@
         gap: 10px;
 
         &__links {
-            text-align: left;
+
             text-decoration: none;
             color: rgb(0, 0, 0);
             font-size: 16px;
             font-weight: 400;
             line-height: 32px;
-            text-align: left;
+
         }
     }
 
@@ -82,15 +42,15 @@
         display: flex;
         gap: 10px;
         position: relative;
-        
-        &__filter:hover >
-        .catalog__filter-box__filter__select {
+
+        &__filter:hover>.catalog__filter-box__filter__select {
             color: $color-text;
         }
-        &__filter-pop:hover >
-        .catalog__filter-box__filter-pop__select {
+
+        &__filter-pop:hover>.catalog__filter-box__filter-pop__select {
             color: $color-text;
         }
+
         &__filter {
             box-sizing: border-box;
             border: 1px solid rgb(196, 196, 196);
@@ -103,9 +63,11 @@
             justify-content: flex-end;
             overflow: hidden;
             transition: all 0.3s;
+
             &:hover {
                 background-color: black;
                 color: $color-text;
+
                 &:after {
                     content: "";
                     width: 32px;
@@ -121,12 +83,13 @@
                     margin-right: 22px;
                 }
             }
+
             &__select {
                 color: rgb(0, 0, 0);
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 20px;
-                text-align: left;
+
                 border: none;
                 background: transparent;
                 padding-right: 56px;
@@ -152,6 +115,7 @@
                 margin-right: 22px;
             }
         }
+
         &__filter-pop {
             box-sizing: border-box;
             border: 1px solid rgb(196, 196, 196);
@@ -164,9 +128,11 @@
             justify-content: flex-end;
             overflow: hidden;
             transition: all 0.5s;
+
             &:hover {
                 background-color: black;
                 color: $color-text;
+
                 &:after {
                     content: "";
                     width: 32px;
@@ -182,12 +148,13 @@
                     margin-right: 22px;
                 }
             }
+
             &__select {
                 color: rgb(0, 0, 0);
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 20px;
-                text-align: left;
+
                 border: none;
                 background: transparent;
                 padding-right: 56px;
@@ -213,7 +180,7 @@
                 margin-right: 22px;
             }
 
-            
+
         }
 
         &__form {
@@ -240,23 +207,23 @@
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 17px;
-                    text-align: left;
+
                     border: none;
-    
+
                     &__header {
                         color: rgb(5, 5, 5);
                         font-size: 16px;
                         font-weight: 500;
                         line-height: 20px;
-                        text-align: left;
+
                         padding-bottom: 16px;
-    
+
                     }
-    
+
                     &__radio {
                         &__input {
                             display: none;
-    
+
                             &:checked {
                                 &+label:after {
                                     content: "";
@@ -272,12 +239,12 @@
                                 }
                             }
                         }
-    
+
                         &__label {
                             position: relative;
                             padding-left: 25px;
                             cursor: pointer;
-    
+
                             &:before {
                                 content: "";
                                 position: absolute;
@@ -293,47 +260,47 @@
                         }
                     }
                 }
-    
+
                 &__price {
                     background: $color-text;
                     border: none;
                     display: flex;
                     flex-direction: column;
                     gap: 14px;
-    
+
                     &__header {
                         padding-top: 32px;
                         color: rgb(5, 5, 5);
                         font-size: 16px;
                         font-weight: 500;
                         line-height: 20px;
-                        text-align: left;
+
                     }
-    
+
                     &__paragraf {
                         padding-top: 14px;
                         color: rgb(0, 0, 0);
                         font-size: 14px;
                         font-weight: 400;
                         line-height: 17px;
-                        text-align: left;
-    
+
+
                         &__value {
                             border: none;
-    
+
                             &::-webkit-inner-spin-button {
                                 -webkit-appearance: none;
-    
+
                             }
                         }
                     }
-    
-    
+
+
                     &__box {
                         display: flex;
-    
-    
-    
+
+
+
                         &__range {
                             width: 190px;
                             -webkit-appearance: none;
@@ -341,8 +308,8 @@
                             appearance: none;
                             pointer-events: none;
                             outline: none;
-    
-    
+
+
                             &::-webkit-slider-runnable-track {
                                 height: 1px;
                                 width: 90px;
@@ -351,7 +318,7 @@
                                 border-left: none;
                                 background-color: #fff;
                             }
-    
+
                             &::-webkit-slider-thumb {
                                 background: rgb(0, 0, 0);
                                 border: 1px solid rgb(0, 0, 0);
@@ -364,13 +331,13 @@
                                 pointer-events: auto;
                                 outline: none;
                             }
-    
+
                             &::-moz-range-track {
                                 height: 1px;
                                 border: 1px solid rgb(0, 0, 0);
                                 background-color: #fff;
                             }
-    
+
                             &::-moz-range-thumb {
                                 background: rgb(0, 0, 0);
                                 border: 1px solid rgb(0, 0, 0);
@@ -379,34 +346,34 @@
                                 pointer-events: auto;
                             }
                         }
-    
+
                     }
                 }
-    
+
                 &__color {
                     width: 190px;
                     border: none;
                     padding-top: 14px;
-    
+
                     &__header {
                         padding-top: 32px;
                         color: rgb(5, 5, 5);
                         font-size: 16px;
                         font-weight: 500;
                         line-height: 20px;
-                        text-align: left;
+
                     }
-    
+
                     &__box {
                         display: flex;
                         flex-wrap: wrap;
                         gap: 14px;
-    
-    
+
+
                         &__white {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -422,13 +389,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -442,11 +409,11 @@
                                 }
                             }
                         }
-    
+
                         &__black {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -462,12 +429,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -481,11 +448,11 @@
                                 }
                             }
                         }
-    
+
                         &__grey {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -501,12 +468,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -520,11 +487,11 @@
                                 }
                             }
                         }
-    
+
                         &__red {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -540,12 +507,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -559,11 +526,11 @@
                                 }
                             }
                         }
-    
+
                         &__orange {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -579,12 +546,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -598,11 +565,11 @@
                                 }
                             }
                         }
-    
+
                         &__yellow {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -618,12 +585,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -637,11 +604,11 @@
                                 }
                             }
                         }
-    
+
                         &__green {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -657,12 +624,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -676,11 +643,11 @@
                                 }
                             }
                         }
-    
+
                         &__light-green {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -696,12 +663,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -715,11 +682,11 @@
                                 }
                             }
                         }
-    
+
                         &__light-blue {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -735,12 +702,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -754,11 +721,11 @@
                                 }
                             }
                         }
-    
+
                         &__blue {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -774,12 +741,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -793,11 +760,11 @@
                                 }
                             }
                         }
-    
+
                         &__light-purple {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -813,12 +780,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -832,11 +799,11 @@
                                 }
                             }
                         }
-    
+
                         &__purple {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -852,12 +819,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -870,13 +837,13 @@
                                     background: rgb(157, 13, 181);
                                 }
                             }
-    
+
                         }
-    
+
                         &__light-pink {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -892,12 +859,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -911,11 +878,11 @@
                                 }
                             }
                         }
-    
+
                         &__pink {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -931,12 +898,12 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 14px;
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -949,11 +916,12 @@
                                     background: rgb(255, 101, 166);
                                 }
                             }
-    
+
                         }
                     }
                 }
             }
+
             &__right {
                 display: flex;
                 flex-direction: column;
@@ -968,34 +936,35 @@
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 17px;
-                    text-align: left;
+
                     border: none;
                     width: 190px;
-    
+
                     &__header {
                         color: rgb(5, 5, 5);
                         font-size: 16px;
                         font-weight: 500;
                         line-height: 20px;
-                        text-align: left;
-    
+
+
                     }
+
                     &__box {
                         color: rgb(0, 0, 0);
                         font-size: 14px;
                         font-weight: 400;
                         line-height: 17px;
-                        text-align: left;
+
                         padding-top: 15px;
                         display: flex;
                         flex-direction: column;
                         gap: 14px;
-    
-    
+
+
                         &__kitchen {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1011,13 +980,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1031,10 +1000,11 @@
                                 }
                             }
                         }
+
                         &__bathroom {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1050,13 +1020,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1070,10 +1040,11 @@
                                 }
                             }
                         }
+
                         &__children {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1089,13 +1060,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1109,10 +1080,11 @@
                                 }
                             }
                         }
+
                         &__office {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1128,13 +1100,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1148,10 +1120,11 @@
                                 }
                             }
                         }
+
                         &__living {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1167,13 +1140,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1187,10 +1160,11 @@
                                 }
                             }
                         }
+
                         &__hallway {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1206,13 +1180,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1226,10 +1200,11 @@
                                 }
                             }
                         }
+
                         &__bedroom {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1245,13 +1220,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1265,10 +1240,11 @@
                                 }
                             }
                         }
+
                         &__wardrobe {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1284,13 +1260,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1304,10 +1280,11 @@
                                 }
                             }
                         }
+
                         &__cottage {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1323,13 +1300,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1343,10 +1320,11 @@
                                 }
                             }
                         }
+
                         &__lighting {
                             &__checkbox {
                                 display: none;
-    
+
                                 &:checked {
                                     &+label:after {
                                         content: "";
@@ -1362,13 +1340,13 @@
                                     }
                                 }
                             }
-    
+
                             &__label {
                                 position: relative;
                                 padding-left: 25px;
-    
+
                                 cursor: pointer;
-    
+
                                 &:before {
                                     content: "";
                                     position: absolute;
@@ -1382,7 +1360,7 @@
                                 }
                             }
                         }
-                    
+
                     }
                 }
 
@@ -1407,7 +1385,7 @@
                 }
             }
         }
-        
+
     }
 }
 

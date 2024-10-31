@@ -7,6 +7,20 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+input,
+button {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background: black;
+  color: #FFFFFF;
+}
+
 .center {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
@@ -32,31 +46,30 @@ body {
   align-items: center;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
 }
-.top__header__menu-mobile {
+.top__menu-mobile {
   display: none;
 }
-.top__header__search {
+.top__search {
   width: 288px;
   height: 41px;
   box-sizing: border-box;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
   background: transparent;
-  padding-left: 32px;
+  color: #FFFFFF;
+  padding: 0px 17px;
 }
-.top__header__search::-moz-placeholder {
+.top__search::-moz-placeholder {
   color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  text-align: left;
 }
-.top__header__search::placeholder {
+.top__search::placeholder {
   color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  text-align: left;
 }
 
 .menu {
@@ -165,7 +178,6 @@ body {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  text-align: left;
 }
 .menu__cart__product__box__description__price {
   color: rgb(5, 5, 5);
@@ -230,18 +242,10 @@ body {
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
-  text-align: left;
   text-decoration: none;
 }
-.internal-links__catalog {
-  line-height: 24px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
+.internal-links:hover {
   text-decoration: underline;
-}
-.internal-links__catalog:hover {
-  text-decoration: none;
 }
 
 .slogan__head {
@@ -251,7 +255,6 @@ body {
   font-size: 64px;
   font-weight: 600;
   line-height: 70px;
-  text-align: left;
   max-width: 767px;
 }
 .slogan__paragraphs {
@@ -260,14 +263,12 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
-  text-align: left;
 }
 .slogan__links-catalog {
   color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  text-align: left;
   text-decoration-line: underline;
 }
 
@@ -286,7 +287,7 @@ body {
   gap: 32px;
   grid-template-columns: repeat(12, 1fr);
 }
-.for-box__cards__item {
+.for-box__item {
   display: flex;
   height: 415px;
   grid-column: span 4;
@@ -298,34 +299,34 @@ body {
   align-items: center;
   text-decoration: none;
 }
-.for-box__cards__item__big {
+.for-box__item__big {
   grid-column: span 6;
 }
-.for-box__cards__item__1 {
+.for-box__item__1 {
   background-image: url(../images/Relax.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.for-box__cards__item__2 {
+.for-box__item__2 {
   background-image: url(../images/Working.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.for-box__cards__item__3 {
+.for-box__item__3 {
   background-image: url(../images/Kitchen.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.for-box__cards__item__4 {
+.for-box__item__4 {
   background-image: url(../images/Children.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.for-box__cards__item__5 {
+.for-box__item__5 {
   background-image: url(../images/Bathroom.jpeg);
   background-repeat: no-repeat;
   background-position: center;
@@ -337,7 +338,6 @@ body {
   font-size: 48px;
   font-weight: 600;
   line-height: 59px;
-  text-align: left;
   padding-top: 64px;
   padding-bottom: 32px;
 }
@@ -346,7 +346,6 @@ body {
   font-size: 48px;
   font-weight: 600;
   line-height: 59px;
-  text-align: left;
   padding-top: 78px;
   padding-bottom: 32px;
 }
@@ -373,7 +372,6 @@ body {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  text-align: left;
   padding-top: 10px;
   padding-bottom: 9px;
   text-decoration: none;
@@ -422,7 +420,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  text-align: left;
 }
 .linksBox__catalog-link:hover {
   text-decoration: none;
@@ -451,14 +448,12 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-  text-align: left;
 }
 .footer__menu__header {
   color: rgb(0, 0, 0);
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  text-align: left;
 }
 .footer__contacts {
   display: flex;
@@ -471,7 +466,6 @@ body {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  text-align: left;
 }
 .footer__contacts__support {
   text-decoration: none;
@@ -479,7 +473,9 @@ body {
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
-  text-align: left;
+}
+.footer__contacts__support:hover {
+  text-decoration: underline;
 }
 .footer__contacts__links {
   display: flex;
@@ -519,7 +515,6 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 15px;
-  text-align: left;
   gap: 12px;
 }
 .news__header {
@@ -535,20 +530,19 @@ body {
   background: rgb(255, 255, 255);
   width: 260px;
   height: 40px;
+  padding: 0px 17px;
 }
 .news__input-email::-moz-placeholder {
   color: rgb(196, 196, 196);
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  padding-left: 25px;
 }
 .news__input-email::placeholder {
   color: rgb(196, 196, 196);
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  padding-left: 25px;
 }
 .news__subscribe-button {
   background: rgba(222, 215, 215, 0.41);
@@ -570,49 +564,9 @@ body {
   background-size: cover;
   height: 400px;
 }
-.catalog-top__header {
-  height: 76px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
-}
-.catalog-top__header__menu-mobile {
-  display: none;
-}
-.catalog-top__header__search {
-  width: 288px;
-  height: 41px;
-  box-sizing: border-box;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 20px;
-  background: transparent;
-  padding-left: 32px;
-  padding-right: 203px;
-}
-.catalog-top__header__search::-moz-placeholder {
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: left;
-}
-.catalog-top__header__search::placeholder {
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: left;
-}
-.catalog-top__slogan {
+
+.ct {
   padding-top: 127px;
-  padding-bottom: 126px;
-  color: rgb(255, 255, 255);
-  font-size: 64px;
-  font-weight: 600;
-  line-height: 70px;
-  text-align: left;
 }
 
 .catalog {
@@ -632,13 +586,11 @@ body {
   gap: 10px;
 }
 .catalog__menu__links {
-  text-align: left;
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
-  text-align: left;
 }
 .catalog__filter-box {
   display: flex;
@@ -687,7 +639,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  text-align: left;
   border: none;
   background: transparent;
   padding-right: 56px;
@@ -747,7 +698,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  text-align: left;
   border: none;
   background: transparent;
   padding-right: 56px;
@@ -793,7 +743,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  text-align: left;
   border: none;
 }
 .catalog__filter-box__form__left__delivery-time__header {
@@ -801,7 +750,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  text-align: left;
   padding-bottom: 16px;
 }
 .catalog__filter-box__form__left__delivery-time__radio__input {
@@ -849,7 +797,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  text-align: left;
 }
 .catalog__filter-box__form__left__price__paragraf {
   padding-top: 14px;
@@ -857,7 +804,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  text-align: left;
 }
 .catalog__filter-box__form__left__price__paragraf__value {
   border: none;
@@ -919,7 +865,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  text-align: left;
 }
 .catalog__filter-box__form__left__color__box {
   display: flex;
@@ -1374,7 +1319,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  text-align: left;
   border: none;
   width: 190px;
 }
@@ -1383,14 +1327,12 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  text-align: left;
 }
 .catalog__filter-box__form__right__room__box {
   color: rgb(0, 0, 0);
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  text-align: left;
   padding-top: 15px;
   display: flex;
   flex-direction: column;
@@ -1740,47 +1682,6 @@ body {
   background-size: cover;
   height: 400px;
 }
-.cart-top__header {
-  height: 76px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
-}
-.cart-top__header__search {
-  width: 288px;
-  height: 41px;
-  box-sizing: border-box;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 20px;
-  background: transparent;
-  padding-left: 32px;
-  padding-right: 203px;
-}
-.cart-top__header__search::-moz-placeholder {
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: left;
-}
-.cart-top__header__search::placeholder {
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: left;
-}
-.cart-top__slogan {
-  padding-top: 127px;
-  padding-bottom: 126px;
-  color: rgb(255, 255, 255);
-  font-size: 64px;
-  font-weight: 600;
-  line-height: 70px;
-  text-align: left;
-}
 
 .cart-body {
   display: flex;
@@ -1852,7 +1753,6 @@ body {
 .cart__product__box {
   display: flex;
   gap: 32px;
-  justify-content: space-between;
 }
 .cart__product__box__description {
   display: flex;
@@ -1864,14 +1764,12 @@ body {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  text-align: left;
 }
 .cart__product__box__description__info {
   color: rgb(136, 136, 136);
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  text-align: left;
   width: 276px;
 }
 .cart__product__box__description__button-box {
@@ -1904,6 +1802,9 @@ body {
   font-weight: 400;
   line-height: 17px;
 }
+.cart__button-box__button:hover > .cart__button-box__button__link {
+  color: #FFFFFF;
+}
 .cart__button-box__button__link {
   color: rgb(0, 0, 0);
   font-size: 14px;
@@ -1911,13 +1812,6 @@ body {
   line-height: 17px;
   text-align: center;
   text-decoration: none;
-}
-.cart__button-box__button__link:active {
-  color: #FFFFFF;
-}
-.cart__button-box__button:active {
-  background-color: black;
-  color: #FFFFFF;
 }
 
 .user-form {
@@ -2005,7 +1899,7 @@ body {
     padding-left: calc(50% - 393px);
     padding-right: calc(50% - 393px);
   }
-  .for-box__cards__item {
+  .for-box__item {
     max-height: 268px;
   }
   .product__content {
@@ -2050,17 +1944,20 @@ body {
     border: none;
     padding-top: 32px;
   }
-  .top__header__search {
+  .top__search {
     display: none;
   }
-  .top__header__img {
+  .top__img {
     max-width: 99px;
   }
-  .top__header__menu-mobile {
+  .top__menu-mobile {
     display: block;
     display: flex;
     gap: 32px;
     align-items: center;
+  }
+  .menu__window:hover .menu__cart {
+    display: none;
   }
   .menu {
     display: none;
@@ -2094,10 +1991,10 @@ body {
     gap: 16px 0px;
     grid-template-columns: repeat(1, 1fr);
   }
-  .for-box__cards__item {
+  .for-box__item {
     max-height: 375px;
   }
-  .for-box__cards__item__big {
+  .for-box__item__big {
     max-height: 244px;
   }
   .product__content {
