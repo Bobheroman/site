@@ -15,6 +15,7 @@ button {
 }
 
 button {
+    transition: all .5s;
     cursor: pointer
 }
 
@@ -48,6 +49,12 @@ button:hover {
         justify-content: space-between;
         align-items: center;
         border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+    }
+    &__img {
+        transition: all .5s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     &__menu-mobile {
         display: none;
@@ -293,28 +300,24 @@ button:hover {
         font-size: 64px;
         font-weight: 600;
         line-height: 70px;
-
         max-width: 767px;
-
-
     }
-
     &__paragraphs {
         padding-bottom: 16px;
         color: rgb(255, 255, 255);
         font-size: 24px;
         font-weight: 400;
         line-height: 32px;
-
     }
-
     &__links-catalog {
         color: rgb(255, 255, 255);
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
 
-        text-decoration-line: underline;
+        &:hover {
+            text-decoration-line: none;
+        }
     }
 }
 
@@ -436,9 +439,27 @@ button:hover {
         flex-direction: column;
         flex-wrap: wrap;
         position: relative;
-        &:hover .product__icons {
-            display: flex;
+        transition: all .5s;
+        &:hover {
+            transform: translate(0px, -4px);
+            .product__header {
+                font-weight: 700;
+            }
+            .product__description {
+                font-weight: 450;
+            }
+            .product__price {
+                font-weight: 600;
+            }
+            .product__old-price {
+                font-weight: 600;
+            }
+            .product__icons {
+                display: flex;
+            }
         }
+        
+            
     }
     &__img {
         width: 100%;
@@ -452,10 +473,10 @@ button:hover {
         font-size: 24px;
         font-weight: 500;
         line-height: 29px;
-
         padding-top: 10px;
         padding-bottom: 9px;
         text-decoration: none;
+        transition: all .5s;
     }
 
     &__description {
@@ -463,19 +484,20 @@ button:hover {
         line-height: 17px;
         color: #888888;
         padding-bottom: 12px;
-
+        transition: all .5s;
     }
 
     &__price-box {
         display: flex;
         gap: 32px;
-        justify-content: flex-start;    
+        justify-content: flex-start;  
     }
     &__price {
         font-weight: 500;
         font-size: 24px;
         line-height: 29px;
         color: #050505;
+        transition: all .5s;
     }
 
     &__old-price {
@@ -484,6 +506,7 @@ button:hover {
         line-height: 29px;
         text-decoration-line: line-through;
         color: #888888;
+        transition: all .5s;
     }
 
     &__icons {
@@ -524,6 +547,13 @@ button:hover {
     padding-top: 32px;
     padding-bottom: 32px;
     background: rgb(247, 246, 246);
+    
+    &__img {
+        transition: all .5s;
+    &:hover {
+        scale: (1.1);
+    }
+    }
 
     &__menu {
         font-weight: 500;

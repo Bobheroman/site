@@ -13,6 +13,7 @@ button {
 }
 
 button {
+  transition: all 0.5s;
   cursor: pointer;
 }
 
@@ -46,6 +47,12 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+}
+.top__img {
+  transition: all 0.5s;
+}
+.top__img:hover {
+  transform: scale(1.1);
 }
 .top__menu-mobile {
   display: none;
@@ -289,7 +296,9 @@ button:hover {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  text-decoration-line: underline;
+}
+.slogan__links-catalog:hover {
+  text-decoration-line: none;
 }
 
 .for-box {
@@ -391,6 +400,22 @@ button:hover {
   flex-direction: column;
   flex-wrap: wrap;
   position: relative;
+  transition: all 0.5s;
+}
+.product__box:hover {
+  transform: translate(0px, -4px);
+}
+.product__box:hover .product__header {
+  font-weight: 700;
+}
+.product__box:hover .product__description {
+  font-weight: 450;
+}
+.product__box:hover .product__price {
+  font-weight: 600;
+}
+.product__box:hover .product__old-price {
+  font-weight: 600;
 }
 .product__box:hover .product__icons {
   display: flex;
@@ -409,12 +434,14 @@ button:hover {
   padding-top: 10px;
   padding-bottom: 9px;
   text-decoration: none;
+  transition: all 0.5s;
 }
 .product__description {
   font-size: 14px;
   line-height: 17px;
   color: #888888;
   padding-bottom: 12px;
+  transition: all 0.5s;
 }
 .product__price-box {
   display: flex;
@@ -426,6 +453,7 @@ button:hover {
   font-size: 24px;
   line-height: 29px;
   color: #050505;
+  transition: all 0.5s;
 }
 .product__old-price {
   font-weight: 500;
@@ -433,6 +461,7 @@ button:hover {
   line-height: 29px;
   text-decoration-line: line-through;
   color: #888888;
+  transition: all 0.5s;
 }
 .product__icons {
   position: absolute;
@@ -467,6 +496,12 @@ button:hover {
   padding-top: 32px;
   padding-bottom: 32px;
   background: rgb(247, 246, 246);
+}
+.footer__img {
+  transition: all 0.5s;
+}
+.footer__img:hover {
+  scale: 1.1;
 }
 .footer__menu {
   font-weight: 500;
