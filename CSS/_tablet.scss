@@ -25,6 +25,9 @@
     .user-form {
         min-height: 556px;
     }
+    .catalog__form {
+        right: 0px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -32,6 +35,7 @@
         padding-left: 24px;
         padding-right: 24px;
     }
+    
 
     .product__box {
         max-width: 345px;

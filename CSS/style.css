@@ -727,7 +727,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   top: 54px;
-  right: 0px;
+  right: 237px;
 }
 .catalog__fieldset {
   display: flex;
@@ -1916,6 +1916,9 @@ button:hover {
   }
   .user-form {
     min-height: 556px;
+  }
+  .catalog__form {
+    right: 0px;
   }
 }
 @media (max-width: 768px) {
