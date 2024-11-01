@@ -82,13 +82,17 @@
             transform: rotate(0deg);
             margin-right: 22px;
         }
+        &:hover
+            .catalog__select {
+                color: $color-text;
+            }
         &--popular {
             transition: all 0.5s;
-    
+            width: 227px;
+
             &:hover {
                 background-color: black;
-                color: $color-text;
-    
+
                 &:after {
                     content: "";
                     width: 32px;
@@ -118,6 +122,10 @@
                 transform: rotate(0deg);
                 margin-right: 22px;
             }
+            &:hover
+            .catalog__select {
+                color: $color-text;
+            }
         }
     }
     &__select {
@@ -133,6 +141,9 @@
         -moz-appearance: none;
         appearance: none;
         transition: all 0.5s;
+    }
+    &__select-item {
+        background-color: black;
     }
     &__form {
         width: 541px;

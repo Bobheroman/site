@@ -353,7 +353,7 @@ button:hover {
   background-size: cover;
 }
 
-.product__header__so {
+.product__header-so {
   color: rgb(0, 0, 0);
   font-size: 48px;
   font-weight: 600;
@@ -361,7 +361,7 @@ button:hover {
   padding-top: 64px;
   padding-bottom: 32px;
 }
-.product__header {
+.product__header-catalog {
   color: rgb(0, 0, 0);
   font-size: 48px;
   font-weight: 600;
@@ -657,12 +657,15 @@ button:hover {
   transform: rotate(0deg);
   margin-right: 22px;
 }
+.catalog__filter:hover .catalog__select {
+  color: #FFFFFF;
+}
 .catalog__filter--popular {
   transition: all 0.5s;
+  width: 227px;
 }
 .catalog__filter--popular:hover {
   background-color: black;
-  color: #FFFFFF;
 }
 .catalog__filter--popular:hover:after {
   content: "";
@@ -692,6 +695,9 @@ button:hover {
   transform: rotate(0deg);
   margin-right: 22px;
 }
+.catalog__filter--popular:hover .catalog__select {
+  color: #FFFFFF;
+}
 .catalog__select {
   color: rgb(0, 0, 0);
   font-size: 16px;
@@ -705,6 +711,9 @@ button:hover {
   -moz-appearance: none;
   appearance: none;
   transition: all 0.5s;
+}
+.catalog__select-item {
+  background-color: black;
 }
 .catalog__form {
   width: 541px;
@@ -1892,10 +1901,14 @@ button:hover {
   .for-box__item {
     max-height: 268px;
   }
+  .cart__product {
+    min-width: auto;
+    max-width: 786px;
+  }
   .product__content {
     gap: 38px 29px;
   }
-  .footer__img {
+  .footer__img-link {
     display: none;
   }
   .cart-body {
@@ -1913,8 +1926,9 @@ button:hover {
   .product__box {
     max-width: 345px;
   }
-  .product__header,
-  .product__so {
+  .product__header-catalog,
+  .for-box__heading,
+  .product__header-so {
     font-size: 46px;
   }
   .slogan__head {
@@ -1991,7 +2005,7 @@ button:hover {
     gap: 32px 0px;
     justify-content: center;
   }
-  .product__so {
+  .product__header-so {
     font-size: 24px;
     line-height: 29px;
     padding-top: 32px;
@@ -2012,7 +2026,7 @@ button:hover {
     font-size: 18px;
     line-height: 22px;
   }
-  .product__header {
+  .product__header-catalog {
     font-size: 24px;
     line-height: 29px;
     padding-top: 36px;
@@ -2034,20 +2048,20 @@ button:hover {
     background-image: url(../images/catalog/header-mobile.png);
     background-position: left;
   }
+  .ct {
+    padding-top: 82px;
+  }
   .catalog {
     padding-top: 32px;
     padding-bottom: 32px;
     flex-direction: column;
   }
-  .catalog__menu__links {
+  .catalog__link {
     font-size: 14px;
   }
-  .catalog__filter-box {
+  .catalog__filters {
     flex-direction: column-reverse;
     padding-top: 14px;
-  }
-  .catalog__filter-pop {
-    max-width: 203px;
   }
   .catalog__select {
     font-size: 14px;
@@ -2055,6 +2069,9 @@ button:hover {
   }
   .catalog__filter {
     max-width: 164px;
+  }
+  .catalog__filter--popular {
+    max-width: 203px;
   }
   .catalog__select {
     font-size: 14px;
@@ -2070,7 +2087,7 @@ button:hover {
     align-items: flex-start;
     gap: 32px;
   }
-  .catalog__right__button {
+  .catalog__button {
     margin-top: 32px;
   }
   .cart-body {
@@ -2108,6 +2125,11 @@ button:hover {
     line-height: 15px;
     width: 166px;
   }
+  .cart__link {
+    font-size: 12px;
+    line-height: 15px;
+    width: 166px;
+  }
   .user-form {
     max-height: 556px;
     max-width: 343px;
@@ -2135,5 +2157,12 @@ button:hover {
   }
   .footer {
     gap: 1rem 4rem;
+  }
+  .cart__button {
+    font-size: 11px;
+    width: 137px;
+  }
+  .cart__link {
+    font-size: 11px;
   }
 }/*# sourceMappingURL=Style.css.map */

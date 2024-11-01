@@ -55,9 +55,9 @@
                 </form>
                 <form class="catalog__filter catalog__filter--popular" action="#">
                     <select class="catalog__select" id="filter-popular" name="filter-popular">
-                        <option value="new">Сперва новые</option>
-                        <option value="old">Сперва старые</option>
-                        <option selected value="popular">По популярности</option>
+                        <option class="catalog__select-item" value="new">Сперва новые</option>
+                        <option class="catalog__select-item" value="old">Сперва старые</option>
+                        <option selected class="catalog__select-item" value="popular">По популярности</option>
                     </select>
                 </form>
 
@@ -106,7 +106,7 @@
 
                                 <input oninput="this.form.max.value=this.value"
                                     class="catalog__range-input max" type="range"
-                                    min="50000" max="100000" value="100000" id="max-price" name="max-price" step="500">
+                                    min="0" max="100000" value="100000" id="max-price" name="max-price" step="500">
                             </div>
                         </fieldset>
 
@@ -404,8 +404,9 @@
         <a class="linksBox__catalog-link" href="">Показать ещё</a>
     </section>
     <footer class="footer center">
-        <a href="index.html"><img class="footer__img" src="./images/Logo-footer.svg" alt="Логотип нашей компании"></a>
-
+        <a class="footer__img-link" href="index.html">
+            <img class="footer__img" src="./images/Logo-footer.svg" alt="Логотип нашей компании">
+        </a>
         <section class="footer__menu">
             <h3 class="footer__header">Меню</h3>
             <nav>
@@ -416,24 +417,18 @@
                 </ul>
             </nav>
         </section>
-
-
         <!--Ссылки на контакты-->
         <section class="footer__contacts">
             <h4 class="footer__logo">Контакты</h4>
-
             <a class="footer__support" href="tel:+79088008080">+79088008080</a>
             <a class="footer__support" href="mailto:help@interier.com">help@interier.com</a>
-
             <div class="footer__links">
                 <a class="footer__logo" href="./images/vk.svg">
                     <img class="footer__imgVk" src="./images/vk.svg" alt="Логотип Вконтакте">
                 </a>
-
                 <a class="footer__logo" href="./images/telegram.svg">
                     <img class="footer__imgTe" src="./images/telegram.svg" alt="Логотип Телеграмм">
                 </a>
-
                 <a class="footer__logo" href="./images/dzen.svg">
                     <img class="footer__imgYa" src="./images/dzen.svg" alt="Логотип Яндекс Дзен">
                 </a>
@@ -447,8 +442,6 @@
                 <button class="news__subscribe-button" type="submit">Подписаться</button>
             </form>
         </section>
-
-
     </footer>
 </body>
 

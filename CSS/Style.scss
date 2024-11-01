@@ -387,22 +387,20 @@ button:hover {
 }
 
 .product {
-    &__header__so {
+    &__header-so {
         color: rgb(0, 0, 0);
         font-size: 48px;
         font-weight: 600;
         line-height: 59px;
-
         padding-top: 64px;
         padding-bottom: 32px;
     }
 
-    &__header {
+    &__header-catalog {
         color: rgb(0, 0, 0);
         font-size: 48px;
         font-weight: 600;
         line-height: 59px;
-
         padding-top: 78px;
         padding-bottom: 32px;
     }

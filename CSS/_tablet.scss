@@ -7,12 +7,15 @@
     .for-box__item {
         max-height: 268px;
     }
+    .cart__product {
+        min-width: auto;
+        max-width: 786px;
+    }
 
     .product__content {
         gap: 38px 29px;
     }
-
-    .footer__img {
+    .footer__img-link {
         display: none;
     }
 
@@ -34,8 +37,9 @@
         max-width: 345px;
     }
     
-    .product__header,
-    .product__so {
+    .product__header-catalog,
+    .for-box__heading,
+    .product__header-so {
         font-size: 46px;
     }
     .slogan__head {
