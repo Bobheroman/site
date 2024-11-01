@@ -30,6 +30,7 @@ button:hover {
 
 .up {
     border-top: 0.5px solid rgb(202, 205, 216);
+    padding-top: 24px;
 }
 
 .top {
@@ -77,7 +78,6 @@ button:hover {
     display: flex;
     gap: 32px;
 
-
     &__links {
         color: rgb(255, 255, 255);
         font-size: 16px;
@@ -90,7 +90,7 @@ button:hover {
         }
     }
 
-    &__window {
+    &__item {
         color: rgb(255, 255, 255);
         font-size: 16px;
         font-weight: 400;
@@ -103,36 +103,12 @@ button:hover {
             text-decoration: underline;
         }
 
-        &:hover .menu__cart {
+        &:hover .cart-window {
             display: block;
         }
     }
 
-    &__bridge {
-        position: absolute;
-        background: transparent;
-        height: 56px;
-        width: 270px;
-        top: -53px;
-        right: 0px;
-    }
-
-    &__cart {
-        display: none;
-        position: absolute;
-        background-color: $color-text;
-        padding: 40px 48px;
-        max-width: 573px;
-        top: 66px;
-        right: 0px;
-    }
-    &__product {
-        
-        display: flex;
-        
-        padding-bottom: 24px;  
-        gap: 48px;   
-    }
+    
 
     &__button-box-product {
         display: flex;
@@ -142,52 +118,61 @@ button:hover {
 
 }
 
-.window-up {
-    border-top: 0.5px solid rgb(202, 205, 216);
-    padding-top: 24px;
-}
+.cart-window {
+    display: none;
+    position: absolute;
+    background-color: $color-text;
+    padding: 40px 48px;
+    max-width: 573px;
+    top: 66px;
+    right: 0px;
 
-.window-cart {
-
+    &__bridge {
+        position: absolute;
+        background: transparent;
+        height: 56px;
+        width: 270px;
+        top: -53px;
+        right: 0px;
+    }
+    &__product {
+        display: flex;
+        padding-bottom: 24px;  
+        gap: 48px;   
+    }
     &__box {
         display: flex;
         align-items: center;
         justify-content: space-between;    
     }
-    &__info {
+    &__total {
         display: flex;
         gap: 11px;    
     }
-
-    &__heading {
+    &__total-heading {
         color: rgb(0, 0, 0);
         font-size: 24px;
         font-weight: 400;
         line-height: 29px;
-
     }
-
-    &__price {
+    &__total-price {
         color: rgb(0, 0, 0);
         font-size: 24px;
         font-weight: 600;
         line-height: 29px;
-
     }
-    &__button {
+    &__checkout {
         box-sizing: border-box;
         border: 1px solid rgb(4, 4, 4);
         background: transparent;
         border-radius: 50px;
         width: 207px;
         height: 40px;
-
         &:hover a {
-            
             color: $color-text;
         }
     }
-    &__button-link {
+    &__checkout-link {
         color: rgb(0, 0, 0);
         font-size: 16px;
         font-weight: 400;
@@ -196,7 +181,95 @@ button:hover {
     }
 }
 
+.cart-product {
+    display: flex;
+    gap: 32px;
 
+    &__img {
+        width: 144px;
+        height: 144px;
+    }
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__name {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        text-wrap: nowrap;
+    }
+    &__price {
+        color: rgb(5, 5, 5);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;    
+    }
+    &__buttons {
+        display: flex;
+        gap: 30px;
+        padding-top: 54px;
+    }
+    &__button {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: underline;
+        background: none;
+        border: none;
+        &:active {
+            text-decoration: none;
+        }
+    }
+    &__count-box {
+        position: relative;
+    }
+    &__count-up {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 3px;
+        top: 6px;
+        border: none;
+        background: #F7F6F6;
+    }
+    &__count-down {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 3px;
+        top: 27px;
+        border: none;
+        background: #F7F6F6;
+    }
+    &__count {
+        position: relative;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 210%;
+        text-align: center;
+        width: 71px;
+        height: 51px;
+        border-radius: 6px;
+        border: none;
+        background: #F7F6F6;
+        cursor: pointer;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+}
+
+.window-up {
+    border-top: 0.5px solid rgb(202, 205, 216);
+    padding-top: 24px;
+}
 
 .internal-links {
     color: rgb(136, 136, 136);

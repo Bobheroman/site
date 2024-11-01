@@ -20,65 +20,76 @@
             <nav>
                 <ul class="menu">
                     <li><a class="menu__links" href="catalog.html">Каталог</a></li>
-                    <li class="menu__window">
-                        <a class="menu__window" href="./cart.html">Корзина</a>
-                        <div class="menu__cart">
-                            <div class="menu__bridge"></div>
-                            <article class="menu__product">
-                                <div class="cart__box">
-                                    <div class="cart__img"><img src="./images/cart/product1.jpeg" alt=""></div>
-                
-                                    <div class="cart__description">
-                                        <h2 class="cart__heading">Стол MENU</h2>
-                                        
-                                        <p class="cart__price">34 000 руб.</p>
-                                        <div class="menu__button-box-product">
-                                            <button class="cart__button-product">Избранные</button>
-                                            <button class="cart__button-product">Удалить</button>
-                                            
+                    <li class="menu__item">
+                        <a class="menu__links" href="./cart.html">Корзина</a>
+                        <div class="cart-window">
+                            <div class="cart-window__bridge"></div>
+
+
+                            <article class="cart-window__product">
+                                <div class="cart-product">
+                                    <div><img class="cart-product__img" src="./images/cart/product1.jpeg" alt="Стол MENU"></div>
+                                    <div class="cart-product__description">
+                                        <h2 class="cart-product__name">Стол MENU</h2>
+                                        <p class="cart-product__price">34 000 руб.</p>
+                                        <div class="cart-product__buttons">
+                                            <button class="cart-product__button">Избранные</button>
+                                            <button class="cart-product__button">Удалить</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cart__count-box">
-                                    <input id="numberInput1" type="number" value="1" min="0" name="numberInput1" class="cart__count">
-                                    <button class="cart__imgup" onclick="numberInput1.stepUp()"><img src="./images/cart/valueUp.svg"
-                                            alt="vlue-up"></button>
-                                    <button class="cart__imgdown" onclick="numberInput1.stepDown()"><img
-                                            src="./images/cart/valueDown.svg" alt="value-down"></button>
+                                <div class="cart-product__count-box">
+                                    <input id="numberInput1" type="number" value="1" min="0" name="numberInput1"
+                                        class="cart-product__count">
+
+                                    
+
+                                    <button class="cart-product__count-up" onclick="numberInput1.stepUp()">
+                                        <img src="./images/cart/valueUp.svg" alt="value-up">
+                                    </button>
+
+
+
+                                    <button class="cart-product__count-down" onclick="numberInput1.stepDown()">
+                                        <img src="./images/cart/valueDown.svg" alt="value-down">
+                                    </button>
                                 </div>
                             </article>
-                            <article class="menu__product window-up">
-                                <div class="cart__box">
-                                    <div class="cart__img"><img src="./images/cart/product2.jpeg" alt=""></div>
-                
-                                    <div class="cart__description">
-                                        <h2 class="cart__heading">Диван NASTAN</h2>
-                                        
-                                        <p class="cart__price">80 000 руб.</p>
-                                        <div class="menu__button-box-product">
-                                            <button class="cart__button-product">Избранные</button>
-                                            <button class="cart__button-product">Удалить</button>
+                            <!-- Второй продукт -->
+                            <article class="cart-window__product up">
+                                <div class="cart-product">
+                                    <div><img class="cart-product__img" src="./images/cart/product2.jpeg"
+                                            alt="Стол MENU"></div>
+                                    <div class="cart-product__description">
+                                        <h2 class="cart-product__name">Диван NASTAN</h2>
+                                        <p class="cart-product__price">80 000 руб.</p>
+                                        <div class="cart-product__buttons">
+                                            <button class="cart-product__button">Избранные</button>
+                                            <button class="cart-product__button">Удалить</button>
                                         </div>
                                     </div>
-                
                                 </div>
-                                <div class="cart__count-box">
-                                    <input id="numberInput2" type="number" value="1" min="0" name="numberInput2" class="cart__count">
-                                    <button class="cart__imgup" onclick="numberInput2.stepUp()"><img src="./images/cart/valueUp.svg"
-                                            alt="vlue-up"></button>
-                                    <button class="cart__imgdown" onclick="numberInput2.stepDown()"><img
-                                            src="./images/cart/valueDown.svg" alt="value-down"></button>
+                                <div class="cart-product__count-box">
+                                    <input id="numberInput2" type="number" value="1" min="0" name="numberInput1"
+                                        class="cart-product__count">
+                                    <button class="cart-product__count-up" onclick="numberInput2.stepUp()">
+                                        <img src="./images/cart/valueUp.svg" alt="value-up">
+                                    </button>
+                                    <button class="cart-product__count-down" onclick="numberInput2.stepDown()">
+                                        <img src="./images/cart/valueDown.svg" alt="value-down">
+                                    </button>
                                 </div>
                             </article>
-                            <div class="window-cart__box">
-                                <div class="window-cart__info">
-                                    <p class="window-cart__heading">Итого:</p>
-                                    <p class="window-cart__price">114 000 руб.</p>
+                            <div class="cart-window__box">
+                                <div class="cart-window__total">
+                                    <p class="cart-window__total-heading">Итого:</p>
+                                    <p class="cart-window__total-price">114 000 руб.</p>
                                 </div>
-                                <button class="window-cart__button" type="submit">
-                                    <a class="window-cart__button-link" href="cart.html">Оформить заказ</a>
+                                <button class="cart-window__checkout">
+                                    <a class="cart-window__checkout-link" href="cart.html">Оформить заказ</a>
                                 </button>
                             </div>
+
                         </div>
                     </li>
                 </ul>
