@@ -338,51 +338,71 @@ button:hover {
         display: flex;
         height: 415px;
         grid-column: span 4;
+        justify-content: center;
+        align-items: center;
+        
+        &:hover {
+            .for-box__legend {
+                transform: scale(1.5);
+            }
+        }
+        
+        
+
+        
+    }
+    &__legend {
         color: rgb(255, 255, 255);
         font-size: 34px;
         font-weight: 600;
         line-height: 41px;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;   
+        text-decoration: none;
+        transition: transform .5s;
+        
     }
+
     &__big {
         grid-column: span 6;
     }
 
-    &__1 {
+    &__relax {
         background-image: url(../images/Relax.jpeg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        cursor: pointer;
     }
 
-    &__2 {
+    &__work {
         background-image: url(../images/Working.jpeg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        cursor: pointer;
     }
 
-    &__3 {
+    &__kitchen {
         background-image: url(../images/Kitchen.jpeg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        cursor: pointer;
     }
 
-    &__4 {
+    &__kids {
         background-image: url(../images/Children.jpeg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        cursor: pointer;
     }
 
-    &__5 {
+    &__bathroom {
         background-image: url(../images/Bathroom.jpeg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        cursor: pointer;
     }
 }
 

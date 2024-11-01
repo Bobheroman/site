@@ -311,46 +311,57 @@ button:hover {
   display: flex;
   height: 415px;
   grid-column: span 4;
+  justify-content: center;
+  align-items: center;
+}
+.for-box__item:hover .for-box__legend {
+  transform: scale(1.5);
+}
+.for-box__legend {
   color: rgb(255, 255, 255);
   font-size: 34px;
   font-weight: 600;
   line-height: 41px;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
+  transition: transform 0.5s;
 }
 .for-box__big {
   grid-column: span 6;
 }
-.for-box__1 {
+.for-box__relax {
   background-image: url(../images/Relax.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
-.for-box__2 {
+.for-box__work {
   background-image: url(../images/Working.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
-.for-box__3 {
+.for-box__kitchen {
   background-image: url(../images/Kitchen.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
-.for-box__4 {
+.for-box__kids {
   background-image: url(../images/Children.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
-.for-box__5 {
+.for-box__bathroom {
   background-image: url(../images/Bathroom.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
 
 .product__header-so {
