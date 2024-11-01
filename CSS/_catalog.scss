@@ -25,1366 +25,1129 @@
         list-style-type: none;
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        gap: 10px;  
+    }
 
-        &__links {
+    &__link {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+    }
 
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 32px;
+    &__filter {
+        box-sizing: border-box;
+        border: 1px solid rgb(196, 196, 196);
+        border-radius: 20px;
+        width: 182px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: hidden;
+        transition: all 0.3s;
 
+        &:hover {
+            background-color: black;
+            color: $color-text;
+
+            &:after {
+                content: "";
+                width: 32px;
+                position: absolute;
+                z-index: 1;
+                pointer-events: none;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 11px 11px 0 11px;
+                border-color: $color-text transparent transparent transparent;
+                transform: rotate(0deg);
+                margin-right: 22px;
+            }
+        }
+        &:after {
+            content: "";
+            width: 32px;
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 11px 11px 0 11px;
+            border-color: #000000 transparent transparent transparent;
+            transform: rotate(0deg);
+            margin-right: 22px;
+        }
+        &--popular {
+            transition: all 0.5s;
+    
+            &:hover {
+                background-color: black;
+                color: $color-text;
+    
+                &:after {
+                    content: "";
+                    width: 32px;
+                    position: absolute;
+                    z-index: 1;
+                    pointer-events: none;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 11px 11px 0 11px;
+                    border-color: $color-text transparent transparent transparent;
+                    transform: rotate(0deg);
+                    margin-right: 22px;
+                }
+            }
+            &:after {
+                content: "";
+                width: 32px;
+                position: absolute;
+                z-index: 1;
+                pointer-events: none;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 11px 11px 0 11px;
+                border-color: #000000 transparent transparent transparent;
+                transform: rotate(0deg);
+                margin-right: 22px;
+            }
+        }
+    }
+    &__select {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        border: none;
+        background: transparent;
+        padding-right: 56px;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        transition: all 0.5s;
+    }
+    &__form {
+        width: 541px;
+        height: 548px;
+        background: $color-text;
+        position: absolute;
+        z-index: 1;
+        padding-block: 40px;
+        padding-inline: 48px;
+        box-shadow: 10px 10px 20px gray;
+        display: flex;
+        justify-content: space-between;
+        top: 54px;
+        right: 0px;
+    }
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        border: none;
+    }
+    &__legend {
+        color: rgb(5, 5, 5);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    &__legend--delivery {
+        padding-bottom: 16px;
+    }
+    &__radio-input {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__radio-label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            background: #fff;
         }
     }
 
-    &__filter-box {
+    &__fieldset-prise {
+        background: $color-text;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;   
+    }
+    &__legend--price {
+        padding-top: 32px;
+    }
+    &__price-range {
+        padding-top: 14px;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;    
+    }
+    &__price-value {
+        border: none;
+
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+    &__range-box {
+        display: flex;
+    }
+    &__range-input {
+        width: 190px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        pointer-events: none;
+        outline: none;
+
+        &::-webkit-slider-runnable-track {
+            height: 1px;
+            width: 90px;
+            border: 1px solid rgb(0, 0, 0);
+            border-right: none;
+            border-left: none;
+            background-color: #fff;
+        }
+
+        &::-webkit-slider-thumb {
+            background: rgb(0, 0, 0);
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 8px/100%;
+            cursor: pointer;
+            width: 8px;
+            height: 8px;
+            -webkit-appearance: none;
+            margin-top: -4px;
+            pointer-events: auto;
+            outline: none;
+        }
+
+        &::-moz-range-track {
+            height: 1px;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: #fff;
+        }
+
+        &::-moz-range-thumb {
+            background: rgb(0, 0, 0);
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 8px/100%;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+    }
+    &__fielsed-color {
+        width: 190px;
+        border: none;
+        padding-top: 14px;    
+    }
+    &__legend--color {
+        padding-top: 32px;
+    }
+    &__color-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+    &__color-input-white {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-white {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: rgb(255, 255, 255);
+        }
+    }
+    &__color-input-black {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #fff;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-black {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: black;
+        }
+    }
+    &__color-input-gray {
+        display: none;
+
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-gray {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(115, 115, 115);
+            background: rgb(115, 115, 115);
+        }
+    }
+    &__color-input-red {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-red {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(255, 0, 0);
+            background: rgb(255, 0, 0);
+        }
+    }
+    &__color-input-orange {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-orange {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(255, 122, 65);
+            background: rgb(255, 122, 65);
+        }
+    }
+    &__color-input-yellow {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-yellow {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(242, 203, 1);
+            background: rgb(242, 203, 1);
+        }
+    }
+    &__color-input-green {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-green {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(0, 191, 42);
+            background: rgb(0, 191, 42);
+        }
+    }
+    &__color-input-light-green {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-light-green {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(28, 204, 151);
+            background: rgb(28, 204, 151);
+        }
+    }
+    &__color-input-light-blue {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-light-blue {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(0, 159, 227);
+            background: rgb(0, 159, 227);
+        }
+    }
+    &__color-input-blue {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-blue {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(0, 10, 248);
+            background: rgb(0, 10, 248);
+        }
+    }
+    &__color-input-light-purple {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-light-purple {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(103, 16, 214);
+            background: rgb(103, 16, 214);
+        }
+    }
+    &__color-input-purple {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-purple {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(157, 13, 181);
+            background: rgb(157, 13, 181);
+        }
+    }
+    &__color-input-light-pink {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-light-pink {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(216, 154, 255);
+            background: rgb(216, 154, 255);
+        }
+    }
+    &__color-input-pink {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__color-label-pink {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid rgb(255, 101, 166);
+            background: rgb(255, 101, 166);
+        }
+    }
+    &__form-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;   
+    }
+    &__fieldset-rooms {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        border: none;
+        width: 190px;   
+    }
+    &__room-box {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    &__room-input-kitchen {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-kitchen {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__room-input-bathroom {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-bathroom {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__room-input-children {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-children {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__room-input-office {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-office {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__room-input-living {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-living {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__room-input-hallway {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-hallway {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__room-input-bedroom {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-bedroom {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__room-input-wardrobe {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-wardrobe {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__room-input-cottage {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-cottage {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__room-input-lighting {
+        display: none;
+        &:checked {
+            &+label:after {
+                content: "";
+                position: absolute;
+                left: 2px;
+                top: 30%;
+                transform: translateY(-50%);
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 10px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+            }
+        }
+    }
+    &__room-label-lighting {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #fff;
+        }
+    }
+    &__button {
+        background: $color-text;
+        border: 1px solid rgb(4, 4, 4);
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 190px;
+        height: 40px;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: black;
+            color: $color-text;
+        }
+    }
+    
+    &__filters {
         display: flex;
         gap: 10px;
         position: relative;
 
-        &__filter:hover>.catalog__filter-box__filter__select {
+        &__filter:hover>.catalog__select {
             color: $color-text;
         }
 
-        &__filter-pop:hover>.catalog__filter-box__filter-pop__select {
+        &__filter-pop:hover>.catalog__select {
             color: $color-text;
         }
 
-        &__filter {
-            box-sizing: border-box;
-            border: 1px solid rgb(196, 196, 196);
-            border-radius: 20px;
-            width: 182px;
-            height: 40px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-end;
-            overflow: hidden;
-            transition: all 0.3s;
+        
 
-            &:hover {
-                background-color: black;
-                color: $color-text;
+        
 
-                &:after {
-                    content: "";
-                    width: 32px;
-                    position: absolute;
-                    z-index: 1;
-                    pointer-events: none;
-                    width: 0px;
-                    height: 0px;
-                    border-style: solid;
-                    border-width: 11px 11px 0 11px;
-                    border-color: $color-text transparent transparent transparent;
-                    transform: rotate(0deg);
-                    margin-right: 22px;
-                }
-            }
-
-            &__select {
-                color: rgb(0, 0, 0);
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 20px;
-
-                border: none;
-                background: transparent;
-                padding-right: 56px;
-                outline: none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                transition: all 0.5s;
-            }
-
-            &:after {
-                content: "";
-                width: 32px;
-                position: absolute;
-                z-index: 1;
-                pointer-events: none;
-                width: 0px;
-                height: 0px;
-                border-style: solid;
-                border-width: 11px 11px 0 11px;
-                border-color: #000000 transparent transparent transparent;
-                transform: rotate(0deg);
-                margin-right: 22px;
-            }
-        }
-
-        &__filter-pop {
-            box-sizing: border-box;
-            border: 1px solid rgb(196, 196, 196);
-            border-radius: 20px;
-            width: 227px;
-            height: 40px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-end;
-            overflow: hidden;
-            transition: all 0.5s;
-
-            &:hover {
-                background-color: black;
-                color: $color-text;
-
-                &:after {
-                    content: "";
-                    width: 32px;
-                    position: absolute;
-                    z-index: 1;
-                    pointer-events: none;
-                    width: 0px;
-                    height: 0px;
-                    border-style: solid;
-                    border-width: 11px 11px 0 11px;
-                    border-color: $color-text transparent transparent transparent;
-                    transform: rotate(0deg);
-                    margin-right: 22px;
-                }
-            }
-
-            &__select {
-                color: rgb(0, 0, 0);
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 20px;
-
-                border: none;
-                background: transparent;
-                padding-right: 56px;
-                outline: none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                transition: all 0.5s;
-            }
-
-            &:after {
-                content: "";
-                width: 32px;
-                position: absolute;
-                z-index: 1;
-                pointer-events: none;
-                width: 0px;
-                height: 0px;
-                border-style: solid;
-                border-width: 11px 11px 0 11px;
-                border-color: #000000 transparent transparent transparent;
-                transform: rotate(0deg);
-                margin-right: 22px;
-            }
-
-
-        }
-
-        &__form {
-            width: 541px;
-            height: 548px;
-            background: $color-text;
-            position: absolute;
-            z-index: 1;
-            padding-block: 40px;
-            padding-inline: 48px;
-            box-shadow: 10px 10px 20px gray;
-            display: flex;
-            justify-content: space-between;
-            top: 54px;
-            right: 0px;
-
-            &__left {
-
-                &__delivery-time {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 14px;
-                    color: rgb(0, 0, 0);
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 17px;
-
-                    border: none;
-
-                    &__header {
-                        color: rgb(5, 5, 5);
-                        font-size: 16px;
-                        font-weight: 500;
-                        line-height: 20px;
-
-                        padding-bottom: 16px;
-
-                    }
-
-                    &__radio {
-                        &__input {
-                            display: none;
-
-                            &:checked {
-                                &+label:after {
-                                    content: "";
-                                    position: absolute;
-                                    left: 2px;
-                                    top: 30%;
-                                    transform: translateY(-50%);
-                                    transform: rotate(45deg) translateY(-50%);
-                                    width: 5px;
-                                    height: 10px;
-                                    border: solid #000;
-                                    border-width: 0 2px 2px 0;
-                                }
-                            }
-                        }
-
-                        &__label {
-                            position: relative;
-                            padding-left: 25px;
-                            cursor: pointer;
-
-                            &:before {
-                                content: "";
-                                position: absolute;
-                                left: 0;
-                                top: 50%;
-                                transform: translateY(-50%);
-                                width: 15px;
-                                height: 15px;
-                                border: 2px solid #000;
-                                border-radius: 50%;
-                                background: #fff;
-                            }
-                        }
-                    }
-                }
-
-                &__price {
-                    background: $color-text;
-                    border: none;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 14px;
-
-                    &__header {
-                        padding-top: 32px;
-                        color: rgb(5, 5, 5);
-                        font-size: 16px;
-                        font-weight: 500;
-                        line-height: 20px;
-
-                    }
-
-                    &__paragraf {
-                        padding-top: 14px;
-                        color: rgb(0, 0, 0);
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 17px;
-
-
-                        &__value {
-                            border: none;
-
-                            &::-webkit-inner-spin-button {
-                                -webkit-appearance: none;
-
-                            }
-                        }
-                    }
-
-
-                    &__box {
-                        display: flex;
-
-
-
-                        &__range {
-                            width: 190px;
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                            appearance: none;
-                            pointer-events: none;
-                            outline: none;
-
-
-                            &::-webkit-slider-runnable-track {
-                                height: 1px;
-                                width: 90px;
-                                border: 1px solid rgb(0, 0, 0);
-                                border-right: none;
-                                border-left: none;
-                                background-color: #fff;
-                            }
-
-                            &::-webkit-slider-thumb {
-                                background: rgb(0, 0, 0);
-                                border: 1px solid rgb(0, 0, 0);
-                                border-radius: 8px/100%;
-                                cursor: pointer;
-                                width: 8px;
-                                height: 8px;
-                                -webkit-appearance: none;
-                                margin-top: -4px;
-                                pointer-events: auto;
-                                outline: none;
-                            }
-
-                            &::-moz-range-track {
-                                height: 1px;
-                                border: 1px solid rgb(0, 0, 0);
-                                background-color: #fff;
-                            }
-
-                            &::-moz-range-thumb {
-                                background: rgb(0, 0, 0);
-                                border: 1px solid rgb(0, 0, 0);
-                                border-radius: 8px/100%;
-                                cursor: pointer;
-                                pointer-events: auto;
-                            }
-                        }
-
-                    }
-                }
-
-                &__color {
-                    width: 190px;
-                    border: none;
-                    padding-top: 14px;
-
-                    &__header {
-                        padding-top: 32px;
-                        color: rgb(5, 5, 5);
-                        font-size: 16px;
-                        font-weight: 500;
-                        line-height: 20px;
-
-                    }
-
-                    &__box {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 14px;
-
-
-                        &__white {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__black {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #fff;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: black;
-                                }
-                            }
-                        }
-
-                        &__grey {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(115, 115, 115);
-                                    background: rgb(115, 115, 115);
-                                }
-                            }
-                        }
-
-                        &__red {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(255, 0, 0);
-                                    background: rgb(255, 0, 0);
-                                }
-                            }
-                        }
-
-                        &__orange {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(255, 122, 65);
-                                    background: rgb(255, 122, 65);
-                                }
-                            }
-                        }
-
-                        &__yellow {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(242, 203, 1);
-                                    background: rgb(242, 203, 1);
-                                }
-                            }
-                        }
-
-                        &__green {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(0, 191, 42);
-                                    background: rgb(0, 191, 42);
-                                }
-                            }
-                        }
-
-                        &__light-green {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(28, 204, 151);
-                                    background: rgb(28, 204, 151);
-                                }
-                            }
-                        }
-
-                        &__light-blue {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(0, 159, 227);
-                                    background: rgb(0, 159, 227);
-                                }
-                            }
-                        }
-
-                        &__blue {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(0, 10, 248);
-                                    background: rgb(0, 10, 248);
-                                }
-                            }
-                        }
-
-                        &__light-purple {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(103, 16, 214);
-                                    background: rgb(103, 16, 214);
-                                }
-                            }
-                        }
-
-                        &__purple {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(157, 13, 181);
-                                    background: rgb(157, 13, 181);
-                                }
-                            }
-
-                        }
-
-                        &__light-pink {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(216, 154, 255);
-                                    background: rgb(216, 154, 255);
-                                }
-                            }
-                        }
-
-                        &__pink {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 14px;
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid rgb(255, 101, 166);
-                                    background: rgb(255, 101, 166);
-                                }
-                            }
-
-                        }
-                    }
-                }
-            }
-
-            &__right {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: flex-end;
-
-                &__room {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 14px;
-                    color: rgb(0, 0, 0);
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 17px;
-
-                    border: none;
-                    width: 190px;
-
-                    &__header {
-                        color: rgb(5, 5, 5);
-                        font-size: 16px;
-                        font-weight: 500;
-                        line-height: 20px;
-
-
-                    }
-
-                    &__box {
-                        color: rgb(0, 0, 0);
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 17px;
-
-                        padding-top: 15px;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 14px;
-
-
-                        &__kitchen {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__bathroom {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__children {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__office {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__living {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__hallway {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__bedroom {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__wardrobe {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__cottage {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                        &__lighting {
-                            &__checkbox {
-                                display: none;
-
-                                &:checked {
-                                    &+label:after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 2px;
-                                        top: 30%;
-                                        transform: translateY(-50%);
-                                        transform: rotate(45deg) translateY(-50%);
-                                        width: 5px;
-                                        height: 10px;
-                                        border: solid #000;
-                                        border-width: 0 2px 2px 0;
-                                    }
-                                }
-                            }
-
-                            &__label {
-                                position: relative;
-                                padding-left: 25px;
-
-                                cursor: pointer;
-
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    width: 15px;
-                                    height: 15px;
-                                    border: 2px solid black;
-                                    background: #fff;
-                                }
-                            }
-                        }
-
-                    }
-                }
-
-                &__button {
-                    background: $color-text;
-                    border: 1px solid rgb(4, 4, 4);
-                    box-sizing: border-box;
-                    border-radius: 20px;
-                    width: 190px;
-                    height: 40px;
-                    color: rgb(0, 0, 0);
-                    font-size: 16px;
-                    font-weight: 400;
-                    line-height: 20px;
-                    text-align: center;
-                    transition: all 0.5s;
-
-                    &:hover {
-                        background-color: black;
-                        color: $color-text;
-                    }
-                }
-            }
-        }
+        
 
     }
 }

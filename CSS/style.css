@@ -605,25 +605,14 @@ button:hover {
   flex-direction: row;
   gap: 10px;
 }
-.catalog__menu__links {
+.catalog__link {
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
 }
-.catalog__filter-box {
-  display: flex;
-  gap: 10px;
-  position: relative;
-}
-.catalog__filter-box__filter:hover > .catalog__filter-box__filter__select {
-  color: #FFFFFF;
-}
-.catalog__filter-box__filter-pop:hover > .catalog__filter-box__filter-pop__select {
-  color: #FFFFFF;
-}
-.catalog__filter-box__filter {
+.catalog__filter {
   box-sizing: border-box;
   border: 1px solid rgb(196, 196, 196);
   border-radius: 20px;
@@ -636,11 +625,11 @@ button:hover {
   overflow: hidden;
   transition: all 0.3s;
 }
-.catalog__filter-box__filter:hover {
+.catalog__filter:hover {
   background-color: black;
   color: #FFFFFF;
 }
-.catalog__filter-box__filter:hover:after {
+.catalog__filter:hover:after {
   content: "";
   width: 32px;
   position: absolute;
@@ -654,21 +643,7 @@ button:hover {
   transform: rotate(0deg);
   margin-right: 22px;
 }
-.catalog__filter-box__filter__select {
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  border: none;
-  background: transparent;
-  padding-right: 56px;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  transition: all 0.5s;
-}
-.catalog__filter-box__filter:after {
+.catalog__filter:after {
   content: "";
   width: 32px;
   position: absolute;
@@ -682,24 +657,14 @@ button:hover {
   transform: rotate(0deg);
   margin-right: 22px;
 }
-.catalog__filter-box__filter-pop {
-  box-sizing: border-box;
-  border: 1px solid rgb(196, 196, 196);
-  border-radius: 20px;
-  width: 227px;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  overflow: hidden;
+.catalog__filter--popular {
   transition: all 0.5s;
 }
-.catalog__filter-box__filter-pop:hover {
+.catalog__filter--popular:hover {
   background-color: black;
   color: #FFFFFF;
 }
-.catalog__filter-box__filter-pop:hover:after {
+.catalog__filter--popular:hover:after {
   content: "";
   width: 32px;
   position: absolute;
@@ -713,21 +678,7 @@ button:hover {
   transform: rotate(0deg);
   margin-right: 22px;
 }
-.catalog__filter-box__filter-pop__select {
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  border: none;
-  background: transparent;
-  padding-right: 56px;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  transition: all 0.5s;
-}
-.catalog__filter-box__filter-pop:after {
+.catalog__filter--popular:after {
   content: "";
   width: 32px;
   position: absolute;
@@ -741,7 +692,21 @@ button:hover {
   transform: rotate(0deg);
   margin-right: 22px;
 }
-.catalog__filter-box__form {
+.catalog__select {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
+  background: transparent;
+  padding-right: 56px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.5s;
+}
+.catalog__form {
   width: 541px;
   height: 548px;
   background: #FFFFFF;
@@ -755,7 +720,7 @@ button:hover {
   top: 54px;
   right: 0px;
 }
-.catalog__filter-box__form__left__delivery-time {
+.catalog__fieldset {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -765,17 +730,19 @@ button:hover {
   line-height: 17px;
   border: none;
 }
-.catalog__filter-box__form__left__delivery-time__header {
+.catalog__legend {
   color: rgb(5, 5, 5);
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+}
+.catalog__legend--delivery {
   padding-bottom: 16px;
 }
-.catalog__filter-box__form__left__delivery-time__radio__input {
+.catalog__radio-input {
   display: none;
 }
-.catalog__filter-box__form__left__delivery-time__radio__input:checked + label:after {
+.catalog__radio-input:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -787,12 +754,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__delivery-time__radio__label {
+.catalog__radio-label {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__delivery-time__radio__label:before {
+.catalog__radio-label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -804,37 +771,33 @@ button:hover {
   border-radius: 50%;
   background: #fff;
 }
-.catalog__filter-box__form__left__price {
+.catalog__fieldset-prise {
   background: #FFFFFF;
   border: none;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-.catalog__filter-box__form__left__price__header {
+.catalog__legend--price {
   padding-top: 32px;
-  color: rgb(5, 5, 5);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
 }
-.catalog__filter-box__form__left__price__paragraf {
+.catalog__price-range {
   padding-top: 14px;
   color: rgb(0, 0, 0);
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
 }
-.catalog__filter-box__form__left__price__paragraf__value {
+.catalog__price-value {
   border: none;
 }
-.catalog__filter-box__form__left__price__paragraf__value::-webkit-inner-spin-button {
+.catalog__price-value::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.catalog__filter-box__form__left__price__box {
+.catalog__range-box {
   display: flex;
 }
-.catalog__filter-box__form__left__price__box__range {
+.catalog__range-input {
   width: 190px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -842,7 +805,7 @@ button:hover {
   pointer-events: none;
   outline: none;
 }
-.catalog__filter-box__form__left__price__box__range::-webkit-slider-runnable-track {
+.catalog__range-input::-webkit-slider-runnable-track {
   height: 1px;
   width: 90px;
   border: 1px solid rgb(0, 0, 0);
@@ -850,7 +813,7 @@ button:hover {
   border-left: none;
   background-color: #fff;
 }
-.catalog__filter-box__form__left__price__box__range::-webkit-slider-thumb {
+.catalog__range-input::-webkit-slider-thumb {
   background: rgb(0, 0, 0);
   border: 1px solid rgb(0, 0, 0);
   border-radius: 8px/100%;
@@ -862,39 +825,35 @@ button:hover {
   pointer-events: auto;
   outline: none;
 }
-.catalog__filter-box__form__left__price__box__range::-moz-range-track {
+.catalog__range-input::-moz-range-track {
   height: 1px;
   border: 1px solid rgb(0, 0, 0);
   background-color: #fff;
 }
-.catalog__filter-box__form__left__price__box__range::-moz-range-thumb {
+.catalog__range-input::-moz-range-thumb {
   background: rgb(0, 0, 0);
   border: 1px solid rgb(0, 0, 0);
   border-radius: 8px/100%;
   cursor: pointer;
   pointer-events: auto;
 }
-.catalog__filter-box__form__left__color {
+.catalog__fielsed-color {
   width: 190px;
   border: none;
   padding-top: 14px;
 }
-.catalog__filter-box__form__left__color__header {
+.catalog__legend--color {
   padding-top: 32px;
-  color: rgb(5, 5, 5);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
 }
-.catalog__filter-box__form__left__color__box {
+.catalog__color-box {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
 }
-.catalog__filter-box__form__left__color__box__white__checkbox {
+.catalog__color-input-white {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__white__checkbox:checked + label:after {
+.catalog__color-input-white:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -903,15 +862,15 @@ button:hover {
   transform: rotate(45deg) translateY(-50%);
   width: 5px;
   height: 10px;
-  border: solid #000;
+  border: solid #000000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__white__label {
+.catalog__color-label-white {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__white__label:before {
+.catalog__color-label-white:before {
   content: "";
   position: absolute;
   left: 0;
@@ -920,12 +879,12 @@ button:hover {
   width: 15px;
   height: 15px;
   border: 2px solid black;
-  background: #fff;
+  background: rgb(255, 255, 255);
 }
-.catalog__filter-box__form__left__color__box__black__checkbox {
+.catalog__color-input-black {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__black__checkbox:checked + label:after {
+.catalog__color-input-black:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -937,12 +896,12 @@ button:hover {
   border: solid #fff;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__black__label {
+.catalog__color-label-black {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__black__label:before {
+.catalog__color-label-black:before {
   content: "";
   position: absolute;
   left: 0;
@@ -953,10 +912,10 @@ button:hover {
   border: 2px solid black;
   background: black;
 }
-.catalog__filter-box__form__left__color__box__grey__checkbox {
+.catalog__color-input-gray {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__grey__checkbox:checked + label:after {
+.catalog__color-input-gray:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -968,12 +927,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__grey__label {
+.catalog__color-label-gray {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__grey__label:before {
+.catalog__color-label-gray:before {
   content: "";
   position: absolute;
   left: 0;
@@ -984,10 +943,10 @@ button:hover {
   border: 2px solid rgb(115, 115, 115);
   background: rgb(115, 115, 115);
 }
-.catalog__filter-box__form__left__color__box__red__checkbox {
+.catalog__color-input-red {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__red__checkbox:checked + label:after {
+.catalog__color-input-red:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -999,12 +958,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__red__label {
+.catalog__color-label-red {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__red__label:before {
+.catalog__color-label-red:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1015,10 +974,10 @@ button:hover {
   border: 2px solid rgb(255, 0, 0);
   background: rgb(255, 0, 0);
 }
-.catalog__filter-box__form__left__color__box__orange__checkbox {
+.catalog__color-input-orange {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__orange__checkbox:checked + label:after {
+.catalog__color-input-orange:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1030,12 +989,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__orange__label {
+.catalog__color-label-orange {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__orange__label:before {
+.catalog__color-label-orange:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1046,10 +1005,10 @@ button:hover {
   border: 2px solid rgb(255, 122, 65);
   background: rgb(255, 122, 65);
 }
-.catalog__filter-box__form__left__color__box__yellow__checkbox {
+.catalog__color-input-yellow {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__yellow__checkbox:checked + label:after {
+.catalog__color-input-yellow:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1061,12 +1020,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__yellow__label {
+.catalog__color-label-yellow {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__yellow__label:before {
+.catalog__color-label-yellow:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1077,10 +1036,10 @@ button:hover {
   border: 2px solid rgb(242, 203, 1);
   background: rgb(242, 203, 1);
 }
-.catalog__filter-box__form__left__color__box__green__checkbox {
+.catalog__color-input-green {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__green__checkbox:checked + label:after {
+.catalog__color-input-green:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1092,12 +1051,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__green__label {
+.catalog__color-label-green {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__green__label:before {
+.catalog__color-label-green:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1108,10 +1067,10 @@ button:hover {
   border: 2px solid rgb(0, 191, 42);
   background: rgb(0, 191, 42);
 }
-.catalog__filter-box__form__left__color__box__light-green__checkbox {
+.catalog__color-input-light-green {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__light-green__checkbox:checked + label:after {
+.catalog__color-input-light-green:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1123,12 +1082,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__light-green__label {
+.catalog__color-label-light-green {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__light-green__label:before {
+.catalog__color-label-light-green:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1139,10 +1098,10 @@ button:hover {
   border: 2px solid rgb(28, 204, 151);
   background: rgb(28, 204, 151);
 }
-.catalog__filter-box__form__left__color__box__light-blue__checkbox {
+.catalog__color-input-light-blue {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__light-blue__checkbox:checked + label:after {
+.catalog__color-input-light-blue:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1154,12 +1113,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__light-blue__label {
+.catalog__color-label-light-blue {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__light-blue__label:before {
+.catalog__color-label-light-blue:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1170,10 +1129,10 @@ button:hover {
   border: 2px solid rgb(0, 159, 227);
   background: rgb(0, 159, 227);
 }
-.catalog__filter-box__form__left__color__box__blue__checkbox {
+.catalog__color-input-blue {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__blue__checkbox:checked + label:after {
+.catalog__color-input-blue:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1185,12 +1144,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__blue__label {
+.catalog__color-label-blue {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__blue__label:before {
+.catalog__color-label-blue:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1201,10 +1160,10 @@ button:hover {
   border: 2px solid rgb(0, 10, 248);
   background: rgb(0, 10, 248);
 }
-.catalog__filter-box__form__left__color__box__light-purple__checkbox {
+.catalog__color-input-light-purple {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__light-purple__checkbox:checked + label:after {
+.catalog__color-input-light-purple:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1216,12 +1175,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__light-purple__label {
+.catalog__color-label-light-purple {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__light-purple__label:before {
+.catalog__color-label-light-purple:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1232,10 +1191,10 @@ button:hover {
   border: 2px solid rgb(103, 16, 214);
   background: rgb(103, 16, 214);
 }
-.catalog__filter-box__form__left__color__box__purple__checkbox {
+.catalog__color-input-purple {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__purple__checkbox:checked + label:after {
+.catalog__color-input-purple:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1247,12 +1206,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__purple__label {
+.catalog__color-label-purple {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__purple__label:before {
+.catalog__color-label-purple:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1263,10 +1222,10 @@ button:hover {
   border: 2px solid rgb(157, 13, 181);
   background: rgb(157, 13, 181);
 }
-.catalog__filter-box__form__left__color__box__light-pink__checkbox {
+.catalog__color-input-light-pink {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__light-pink__checkbox:checked + label:after {
+.catalog__color-input-light-pink:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1278,12 +1237,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__light-pink__label {
+.catalog__color-label-light-pink {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__light-pink__label:before {
+.catalog__color-label-light-pink:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1294,10 +1253,10 @@ button:hover {
   border: 2px solid rgb(216, 154, 255);
   background: rgb(216, 154, 255);
 }
-.catalog__filter-box__form__left__color__box__pink__checkbox {
+.catalog__color-input-pink {
   display: none;
 }
-.catalog__filter-box__form__left__color__box__pink__checkbox:checked + label:after {
+.catalog__color-input-pink:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1309,12 +1268,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__left__color__box__pink__label {
+.catalog__color-label-pink {
   position: relative;
   padding-left: 14px;
   cursor: pointer;
 }
-.catalog__filter-box__form__left__color__box__pink__label:before {
+.catalog__color-label-pink:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1325,13 +1284,13 @@ button:hover {
   border: 2px solid rgb(255, 101, 166);
   background: rgb(255, 101, 166);
 }
-.catalog__filter-box__form__right {
+.catalog__form-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
 }
-.catalog__filter-box__form__right__room {
+.catalog__fieldset-rooms {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -1342,13 +1301,7 @@ button:hover {
   border: none;
   width: 190px;
 }
-.catalog__filter-box__form__right__room__header {
-  color: rgb(5, 5, 5);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-}
-.catalog__filter-box__form__right__room__box {
+.catalog__room-box {
   color: rgb(0, 0, 0);
   font-size: 14px;
   font-weight: 400;
@@ -1358,10 +1311,10 @@ button:hover {
   flex-direction: column;
   gap: 14px;
 }
-.catalog__filter-box__form__right__room__box__kitchen__checkbox {
+.catalog__room-input-kitchen {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__kitchen__checkbox:checked + label:after {
+.catalog__room-input-kitchen:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1373,12 +1326,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__kitchen__label {
+.catalog__room-label-kitchen {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__kitchen__label:before {
+.catalog__room-label-kitchen:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1389,10 +1342,10 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__room__box__bathroom__checkbox {
+.catalog__room-input-bathroom {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__bathroom__checkbox:checked + label:after {
+.catalog__room-input-bathroom:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1404,12 +1357,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__bathroom__label {
+.catalog__room-label-bathroom {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__bathroom__label:before {
+.catalog__room-label-bathroom:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1420,10 +1373,10 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__room__box__children__checkbox {
+.catalog__room-input-children {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__children__checkbox:checked + label:after {
+.catalog__room-input-children:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1435,12 +1388,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__children__label {
+.catalog__room-label-children {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__children__label:before {
+.catalog__room-label-children:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1451,10 +1404,10 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__room__box__office__checkbox {
+.catalog__room-input-office {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__office__checkbox:checked + label:after {
+.catalog__room-input-office:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1466,12 +1419,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__office__label {
+.catalog__room-label-office {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__office__label:before {
+.catalog__room-label-office:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1482,10 +1435,10 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__room__box__living__checkbox {
+.catalog__room-input-living {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__living__checkbox:checked + label:after {
+.catalog__room-input-living:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1497,12 +1450,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__living__label {
+.catalog__room-label-living {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__living__label:before {
+.catalog__room-label-living:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1513,10 +1466,10 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__room__box__hallway__checkbox {
+.catalog__room-input-hallway {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__hallway__checkbox:checked + label:after {
+.catalog__room-input-hallway:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1528,12 +1481,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__hallway__label {
+.catalog__room-label-hallway {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__hallway__label:before {
+.catalog__room-label-hallway:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1544,10 +1497,10 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__room__box__bedroom__checkbox {
+.catalog__room-input-bedroom {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__bedroom__checkbox:checked + label:after {
+.catalog__room-input-bedroom:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1559,12 +1512,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__bedroom__label {
+.catalog__room-label-bedroom {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__bedroom__label:before {
+.catalog__room-label-bedroom:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1575,10 +1528,10 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__room__box__wardrobe__checkbox {
+.catalog__room-input-wardrobe {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__wardrobe__checkbox:checked + label:after {
+.catalog__room-input-wardrobe:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1590,12 +1543,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__wardrobe__label {
+.catalog__room-label-wardrobe {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__wardrobe__label:before {
+.catalog__room-label-wardrobe:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1606,10 +1559,10 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__room__box__cottage__checkbox {
+.catalog__room-input-cottage {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__cottage__checkbox:checked + label:after {
+.catalog__room-input-cottage:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1621,12 +1574,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__cottage__label {
+.catalog__room-label-cottage {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__cottage__label:before {
+.catalog__room-label-cottage:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1637,10 +1590,10 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__room__box__lighting__checkbox {
+.catalog__room-input-lighting {
   display: none;
 }
-.catalog__filter-box__form__right__room__box__lighting__checkbox:checked + label:after {
+.catalog__room-input-lighting:checked + label:after {
   content: "";
   position: absolute;
   left: 2px;
@@ -1652,12 +1605,12 @@ button:hover {
   border: solid #000;
   border-width: 0 2px 2px 0;
 }
-.catalog__filter-box__form__right__room__box__lighting__label {
+.catalog__room-label-lighting {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-.catalog__filter-box__form__right__room__box__lighting__label:before {
+.catalog__room-label-lighting:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1668,7 +1621,7 @@ button:hover {
   border: 2px solid black;
   background: #fff;
 }
-.catalog__filter-box__form__right__button {
+.catalog__button {
   background: #FFFFFF;
   border: 1px solid rgb(4, 4, 4);
   box-sizing: border-box;
@@ -1682,8 +1635,19 @@ button:hover {
   text-align: center;
   transition: all 0.5s;
 }
-.catalog__filter-box__form__right__button:hover {
+.catalog__button:hover {
   background-color: black;
+  color: #FFFFFF;
+}
+.catalog__filters {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+.catalog__filters__filter:hover > .catalog__select {
+  color: #FFFFFF;
+}
+.catalog__filters__filter-pop:hover > .catalog__select {
   color: #FFFFFF;
 }
 

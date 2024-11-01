@@ -42,251 +42,185 @@
     <section class="center">
         <nav class="catalog">
             <ul class="catalog__menu">
-                <li><a class="catalog__menu__links" href="./index.html">Главная</a></li>
-                <li><a class="catalog__menu__links deactivated" href="">/</a></li>
-                <li><a class="catalog__menu__links" href="./catalog.html">Каталог товаров</a></li>
+                <li><a class="catalog__link" href="./index.html">Главная</a></li>
+                <li><a class="catalog__link deactivated" href="">/</a></li>
+                <li><a class="catalog__link" href="./catalog.html">Каталог товаров</a></li>
             </ul>
 
-            <div class="catalog__filter-box">
-                <form class="catalog__filter-box__filter" action="#" method="get">
-                    <select class="catalog__filter-box__filter__select" id="filter" name="filter">
+            <div class="catalog__filters">
+                <form class="catalog__filter" action="#" method="get">
+                    <select class="catalog__select" id="filter" name="filter">
                         <option selected value="filter">Фильтрация</option>
                     </select>
                 </form>
-                <form class="catalog__filter-box__filter-pop" action="#">
-                    <select class="catalog__filter-box__filter-pop__select" id="filter-popular" name="filter-popular">
+                <form class="catalog__filter catalog__filter--popular" action="#">
+                    <select class="catalog__select" id="filter-popular" name="filter-popular">
                         <option value="new">Сперва новые</option>
                         <option value="old">Сперва старые</option>
                         <option selected value="popular">По популярности</option>
                     </select>
                 </form>
 
-                <form class="catalog__filter-box__form" action="#" method="get">
-                    <div class="catalog__filter-box__form__left">
-                        <fieldset class="catalog__filter-box__form__left__delivery-time">
-                            <legend class="catalog__filter-box__form__left__delivery-time__header">Срок доставки
-                            </legend>
-                            <div class="catalog__filter-box__form__left__delivery-time__radio">
-                                <input class="catalog__filter-box__form__left__delivery-time__radio__input" type="radio"
-                                    id="no-important" name="delivery-time">
-                                <label class="catalog__filter-box__form__left__delivery-time__radio__label"
-                                    for="no-important">Неважно</label>
+                <form class="catalog__form" action="#" method="get">
+                    <div class="catalog__form-left">
+                        <fieldset class="catalog__fieldset">
+                            <legend class="catalog__legend catalog__legend--delivery">Срок доставки</legend>
+                            <div class="catalog__radio-group">
+                                <input class="catalog__radio-input" type="radio" id="no-important" name="delivery-time">
+                                <label class="catalog__radio-label" for="no-important">Неважно</label>
                             </div>
-                            <div class="catalog__filter-box__form__left__delivery-time__radio">
-                                <input class="catalog__filter-box__form__left__delivery-time__radio__input" type="radio"
-                                    id="today" name="delivery-time">
-                                <label class="catalog__filter-box__form__left__delivery-time__radio__label"
-                                    for="today">Сегодня</label>
+                            <div class="catalog__radio-group">
+                                <input class="catalog__radio-input" type="radio" id="today" name="delivery-time">
+                                <label class="catalog__radio-label" for="today">Сегодня</label>
                             </div>
-                            <div class="catalog__filter-box__form__left__delivery-time__radio">
-                                <input class="catalog__filter-box__form__left__delivery-time__radio__input" type="radio"
-                                    id="tomorrow" name="delivery-time">
-                                <label class="catalog__filter-box__form__left__delivery-time__radio__label"
-                                    for="tomorrow">Завтра</label>
+                            <div class="catalog__radio-group">
+                                <input class="catalog__radio-input" type="radio" id="tomorrow" name="delivery-time">
+                                <label class="catalog__radio-label" for="tomorrow">Завтра</label>
                             </div>
-                            <div class="catalog__filter-box__form__left__delivery-time__radio">
-                                <input class="catalog__filter-box__form__left__delivery-time__radio__input" type="radio"
-                                    id="3days" name="delivery-time">
-                                <label class="catalog__filter-box__form__left__delivery-time__radio__label"
-                                    for="3days">До 3
-                                    дней</label>
+                            <div class="catalog__radio-group">
+                                <input class="catalog__radio-input" type="radio" id="3days" name="delivery-time">
+                                <label class="catalog__radio-label" for="3days">До 3 дней</label>
                             </div>
-                            <div class="catalog__filter-box__form__delivery-time__radio">
-                                <input class="catalog__filter-box__form__left__delivery-time__radio__input" type="radio"
-                                    id="7days" name="delivery-time">
-                                <label class="catalog__filter-box__form__left__delivery-time__radio__label"
-                                    for="7days">До 7
-                                    дней</label>
+                            <div class="catalog__radio-group">
+                                <input class="catalog__radio-input" type="radio" id="7days" name="delivery-time">
+                                <label class="catalog__radio-label" for="7days">До 7 дней</label>
                             </div>
                         </fieldset>
 
-                        <fieldset class="catalog__filter-box__form__left__price">
-                            <legend class="catalog__filter-box__form__left__price__header">Цена</legend>
-                            <p class="catalog__filter-box__form__left__price__paragraf">
+                        <fieldset class="catalog__fieldset-prise">
+                            <legend class="catalog__legend catalog__legend--price">Цена</legend>
+                            <p class="catalog__price-range">
                                 от
-                                <output class="catalog__filter-box__form__left__price__paragraf__value" name="min"
+                                <output class="catalog__price-value" name="min"
                                     oninput="this.form.min-price.value ;this.value">0</output>
                                 руб.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;до
-                                <output class="catalog__filter-box__form__left__price__paragraf__value" name="max"
+                                <output class="catalog__price-value" name="max"
                                     oninput="this.form.max-price.value ;this.value">100000</output>
                                 руб.
                             </p>
-                            <div class="catalog__filter-box__form__left__price__box">
+                            <div class="catalog__range-box">
 
                                 <input oninput="this.form.min.value=this.value"
-                                    class="catalog__filter-box__form__left__price__box__range min" type="range" min="0"
+                                    class="catalog__range-input min" type="range" min="0"
                                     max="100000" value="0" id="min-price" name="min-price" step="500">
 
                                 <input oninput="this.form.max.value=this.value"
-                                    class="catalog__filter-box__form__left__price__box__range max" type="range"
+                                    class="catalog__range-input max" type="range"
                                     min="50000" max="100000" value="100000" id="max-price" name="max-price" step="500">
-
                             </div>
                         </fieldset>
 
-                        <fieldset class="catalog__filter-box__form__left__color">
-                            <legend class="catalog__filter-box__form__left__color__header">Цвет</legend>
-                            <div class="catalog__filter-box__form__left__color__box">
-                                <div class="catalog__filter-box__form__left__color__box__white">
-                                    <input class="catalog__filter-box__form__left__color__box__white__checkbox"
-                                        type="checkbox" name="white" id="white">
-                                    <label class="catalog__filter-box__form__left__color__box__white__label"
-                                        for="white"></label>
+                        <fieldset class="catalog__fielsed-color">
+                            <legend class="catalog__legend catalog__legend--color">Цвет</legend>
+                            <div class="catalog__color-box">
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-white" type="checkbox" name="white" id="white">
+                                    <label class="catalog__color-label-white" for="white"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__black">
-                                    <input class="catalog__filter-box__form__left__color__box__black__checkbox"
-                                        type="checkbox" name="black" id="black">
-                                    <label class="catalog__filter-box__form__left__color__box__black__label"
-                                        for="black"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-black" type="checkbox" name="black" id="black">
+                                    <label class="catalog__color-label-black" for="black"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__grey">
-                                    <input class="catalog__filter-box__form__left__color__box__grey__checkbox"
-                                        type="checkbox" name="grey" id="grey">
-                                    <label class="catalog__filter-box__form__left__color__box__grey__label"
-                                        for="grey"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-gray" type="checkbox" name="grey" id="grey">
+                                    <label class="catalog__color-label-gray" for="grey"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__red">
-                                    <input class="catalog__filter-box__form__left__color__box__red__checkbox"
-                                        type="checkbox" name="red" id="red">
-                                    <label class="catalog__filter-box__form__left__color__box__red__label"
-                                        for="red"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-red" type="checkbox" name="red" id="red">
+                                    <label class="catalog__color-label-red" for="red"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__orange">
-                                    <input class="catalog__filter-box__form__left__color__box__orange__checkbox"
-                                        type="checkbox" name="orange" id="orange">
-                                    <label class="catalog__filter-box__form__left__color__box__orange__label"
-                                        for="orange"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-orange" type="checkbox" name="orange" id="orange">
+                                    <label class="catalog__color-label-orange" for="orange"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__yellow">
-                                    <input class="catalog__filter-box__form__left__color__box__yellow__checkbox"
-                                        type="checkbox" name="yellow" id="yellow">
-                                    <label class="catalog__filter-box__form__left__color__box__yellow__label"
-                                        for="yellow"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-yellow" type="checkbox" name="yellow" id="yellow">
+                                    <label class="catalog__color-label-yellow" for="yellow"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__green">
-                                    <input class="catalog__filter-box__form__left__color__box__green__checkbox"
-                                        type="checkbox" name="green" id="green">
-                                    <label class="catalog__filter-box__form__left__color__box__green__label"
-                                        for="green"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-green" type="checkbox" name="green" id="green">
+                                    <label class="catalog__color-label-green" for="green"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__light-green">
-                                    <input class="catalog__filter-box__form__left__color__box__light-green__checkbox"
-                                        type="checkbox" name="light-green" id="light-green">
-                                    <label class="catalog__filter-box__form__left__color__box__light-green__label"
-                                        for="light-green"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-light-green" type="checkbox" name="light-green" id="light-green">
+                                    <label class="catalog__color-label-light-green" for="light-green"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__light-blue">
-                                    <input class="catalog__filter-box__form__left__color__box__light-blue__checkbox"
-                                        type="checkbox" name="light-blue" id="light-blue">
-                                    <label class="catalog__filter-box__form__left__color__box__light-blue__label"
-                                        for="light-blue"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-light-blue" type="checkbox" name="light-blue" id="light-blue">
+                                    <label class="catalog__color-label-light-blue" for="light-blue"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__blue">
-                                    <input class="catalog__filter-box__form__left__color__box__blue__checkbox"
-                                        type="checkbox" name="blue" id="blue">
-                                    <label class="catalog__filter-box__form__left__color__box__blue__label"
-                                        for="blue"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-blue" type="checkbox" name="blue" id="blue">
+                                    <label class="catalog__color-label-blue" for="blue"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__light-purple">
-                                    <input class="catalog__filter-box__form__left__color__box__light-purple__checkbox"
-                                        type="checkbox" name="light-purple" id="light-purple">
-                                    <label class="catalog__filter-box__form__left__color__box__light-purple__label"
-                                        for="light-purple"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-light-purple" type="checkbox" name="light-purple" id="light-purple">
+                                    <label class="catalog__color-label-light-purple" for="light-purple"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__purple">
-                                    <input class="catalog__filter-box__form__left__color__box__purple__checkbox"
-                                        type="checkbox" name="purple" id="purple">
-                                    <label class="catalog__filter-box__form__left__color__box__purple__label"
-                                        for="purple"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-purple" type="checkbox" name="purple" id="purple">
+                                    <label class="catalog__color-label-purple" for="purple"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__light-pink">
-                                    <input class="catalog__filter-box__form__left__color__box__light-pink__checkbox"
-                                        type="checkbox" name="light-pink" id="light-pink">
-                                    <label class="catalog__filter-box__form__left__color__box__light-pink__label"
-                                        for="light-pink"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-light-pink" type="checkbox" name="light-pink" id="light-pink">
+                                    <label class="catalog__color-label-light-pink" for="light-pink"></label>
                                 </div>
-                                <div class="catalog__filter-box__form__left__color__box__pink">
-                                    <input class="catalog__filter-box__form__left__color__box__pink__checkbox"
-                                        type="checkbox" name="pink" id="pink">
-                                    <label class="catalog__filter-box__form__left__color__box__pink__label"
-                                        for="pink"></label>
+                                <div class="catalog__color">
+                                    <input class="catalog__color-input-pink" type="checkbox" name="pink" id="pink">
+                                    <label class="catalog__color-label-pink" for="pink"></label>
                                 </div>
                             </div>
-
                         </fieldset>
                     </div>
 
-                    <div class="catalog__filter-box__form__right">
-                        <fieldset class="catalog__filter-box__form__right__room">
-                            <legend class="catalog__filter-box__form__right__room__header">Тип комнаты</legend>
-                            <div class="catalog__filter-box__form__right__room__box">
-                                <div class="catalog__filter-box__form__right__room__box__kitchen">
-                                    <input class="catalog__filter-box__form__right__room__box__kitchen__checkbox"
-                                        type="checkbox" name="kitchen" id="kitchen">
-                                    <label class="catalog__filter-box__form__right__room__box__kitchen__label"
-                                        for="kitchen">кухня и столовая</label>
+                    <div class="catalog__form-right">
+                        <fieldset class="catalog__fieldset-rooms">
+                            <legend class="catalog__legend">Тип комнаты</legend>
+                            <div class="catalog__room-box">
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-kitchen" type="checkbox" name="kitchen" id="kitchen">
+                                    <label class="catalog__room-label-kitchen" for="kitchen">кухня и столовая</label>
                                 </div>
-                                <div class="catalog__filter-box__form__right__room__box__bathroom">
-                                    <input class="catalog__filter-box__form__right__room__box__bathroom__checkbox"
-                                        type="checkbox" name="bathroom" id="bathroom">
-                                    <label class="catalog__filter-box__form__right__room__box__bathroom__label"
-                                        for="bathroom">ванная комната</label>
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-bathroom" type="checkbox" name="bathroom" id="bathroom">
+                                    <label class="catalog__room-label-bathroom" for="bathroom">ванная комната</label>
                                 </div>
-                                <div class="catalog__filter-box__form__room__right__box__children">
-                                    <input class="catalog__filter-box__form__right__room__box__children__checkbox"
-                                        type="checkbox" name="children" id="children">
-                                    <label class="catalog__filter-box__form__right__room__box__children__label"
-                                        for="children">детская комната</label>
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-children" type="checkbox" name="children" id="children">
+                                    <label class="catalog__room-label-children" for="children">детская комната</label>
                                 </div>
-                                <div class="catalog__filter-box__form__right__room__box__office">
-                                    <input class="catalog__filter-box__form__right__room__box__office__checkbox"
-                                        type="checkbox" name="office" id="office">
-                                    <label class="catalog__filter-box__form__right__room__box__office__label"
-                                        for="office">домашний офис</label>
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-office" type="checkbox" name="office" id="office">
+                                    <label class="catalog__room-label-office" for="office">домашний офис</label>
                                 </div>
-                                <div class="catalog__filter-box__form__right__room__box__living">
-                                    <input class="catalog__filter-box__form__right__room__box__living__checkbox"
-                                        type="checkbox" name="living" id="living">
-                                    <label class="catalog__filter-box__form__right__room__box__living__label"
-                                        for="living">гостиная</label>
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-living" type="checkbox" name="living" id="living">
+                                    <label class="catalog__room-label-living" for="living">гостиная</label>
                                 </div>
-                                <div class="catalog__filter-box__form__right__room__box__hallway">
-                                    <input class="catalog__filter-box__form__right__room__box__hallway__checkbox"
-                                        type="checkbox" name="hallway" id="hallway">
-                                    <label class="catalog__filter-box__form__right__room__box__hallway__label"
-                                        for="hallway">прихожая</label>
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-hallway" type="checkbox" name="hallway" id="hallway">
+                                    <label class="catalog__room-label-hallway" for="hallway">прихожая</label>
                                 </div>
-                                <div class="catalog__filter-box__form__right__room__box__bedroom">
-                                    <input class="catalog__filter-box__form__right__room__box__bedroom__checkbox"
-                                        type="checkbox" name="bedroom" id="bedroom">
-                                    <label class="catalog__filter-box__form__right__room__box__bedroom__label"
-                                        for="bedroom">спальня</label>
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-bedroom" type="checkbox" name="bedroom" id="bedroom">
+                                    <label class="catalog__room-label-bedroom" for="bedroom">спальня</label>
                                 </div>
-                                <div class="catalog__filter-box__form__right__room__box__wardrobe">
-                                    <input class="catalog__filter-box__form__right__room__box__wardrobe__checkbox"
-                                        type="checkbox" name="wardrobe" id="wardrobe">
-                                    <label class="catalog__filter-box__form__right__room__box__wardrobe__label"
-                                        for="wardrobe">гардероб</label>
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-wardrobe" type="checkbox" name="wardrobe" id="wardrobe">
+                                    <label class="catalog__room-label-wardrobe" for="wardrobe">гардероб</label>
                                 </div>
-                                <div class="catalog__filter-box__form__right__room__box__cottage">
-                                    <input class="catalog__filter-box__form__right__room__box__cottage__checkbox"
-                                        type="checkbox" name="cottage" id="cottage">
-                                    <label class="catalog__filter-box__form__right__room__box__cottage__label"
-                                        for="cottage">дача</label>
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-cottage" type="checkbox" name="cottage" id="cottage">
+                                    <label class="catalog__room-label-cottage" for="cottage">дача</label>
                                 </div>
-                                <div class="catalog__filter-box__form__right__room__box__lighting">
-                                    <input class="catalog__filter-box__form__right__room__box__lighting__checkbox"
-                                        type="checkbox" name="lighting" id="lighting">
-                                    <label class="catalog__filter-box__form__right__room__box__lighting__label"
-                                        for="lighting">освещение</label>
+                                <div class="catalog__room">
+                                    <input class="catalog__room-input-lighting" type="checkbox" name="lighting" id="lighting">
+                                    <label class="catalog__room-label-lighting" for="lighting">освещение</label>
                                 </div>
                             </div>
                         </fieldset>
-                        <button class="catalog__filter-box__form__right__button" type="submit">Применить</button>
+                        <button class="catalog__button" type="submit">Применить</button>
                     </div>
-
-
-
                 </form>
             </div>
         </nav>
