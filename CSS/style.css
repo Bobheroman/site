@@ -626,6 +626,10 @@ button:hover {
   line-height: 17px;
 }
 
+.invisible {
+  display: none;
+}
+
 .top--catalog {
   background-image: url(../images/catalog/Header.png);
   height: 400px;
@@ -670,6 +674,10 @@ button:hover {
   justify-content: flex-end;
   overflow: hidden;
   transition: all 0.3s;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
 }
 .catalog__filter:hover {
   background-color: black;

@@ -46,9 +46,9 @@
 
             <div class="catalog__filters">
                 <form class="catalog__filter" action="#" method="get">
-                    <select class="catalog__select" id="filter" name="filter">
-                        <option selected value="filter">Фильтрация</option>
-                    </select>
+                    <button class="catalog__select" id="filter" name="filter">
+                        Фильтрация
+                    </button>
                 </form>
                 <form class="catalog__filter catalog__filter--popular" action="#">
                     <select class="catalog__select" id="filter-popular" name="filter-popular">
@@ -58,7 +58,7 @@
                     </select>
                 </form>
 
-                <form class="catalog__form" action="#" method="get">
+                <form class="invisible" action="#" method="get">
                     <div class="catalog__form-left">
                         <fieldset class="catalog__fieldset">
                             <legend class="catalog__legend catalog__legend--delivery">Срок доставки</legend>
@@ -455,6 +455,15 @@
             </form>
         </section>
     </footer>
+
+    <script>
+        const buttonEl = document.querySelector('.catalog__select');
+        const formEl = document.querySelector('.invisible');
+
+        buttonEl.addEventListener('click', () => {
+        formEl.classList.toggle('catalog__form');
+        })
+    </script>
 </body>
 
 </html>
